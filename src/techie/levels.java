@@ -18,11 +18,11 @@ public class levels extends javax.swing.JFrame {
      */
     public levels() {
         initComponents();
-
-        ImageIcon backgroundIcon = new ImageIcon("levelsBackGround.png");
-        Image backGroundimg = backgroundIcon.getImage().getScaledInstance(backGroundLabel1.getWidth(), backGroundLabel1.getHeight(), Image.SCALE_SMOOTH);
+      /*ImageIcon backgroundIcon = new ImageIcon("images//levelsBackGround.png");
+        Image backGroundimg = backgroundIcon.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_SMOOTH);
         backgroundIcon = new ImageIcon(backGroundimg);
-        backGroundLabel1.setIcon(backgroundIcon);
+        jLabel2.setIcon(backgroundIcon);
+   */
        
     }
 
@@ -35,62 +35,24 @@ public class levels extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Level1Button = new javax.swing.JButton();
-        Level2Button = new javax.swing.JButton();
-        Level3Button = new javax.swing.JButton();
         welcomeLabel = new javax.swing.JLabel();
         ranking = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        backGroundLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        level1 = new javax.swing.JButton();
+        level2 = new javax.swing.JButton();
+        level3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Techie");
         setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         setLocationByPlatform(true);
-        getContentPane().setLayout(null);
-
-        Level1Button.setBackground(new java.awt.Color(39, 43, 58));
-        Level1Button.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Level1Button.setForeground(new java.awt.Color(255, 255, 255));
-        Level1Button.setText("Level 1");
-        Level1Button.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
-        Level1Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Level1ButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Level1Button);
-        Level1Button.setBounds(80, 350, 180, 30);
-
-        Level2Button.setBackground(new java.awt.Color(39, 43, 59));
-        Level2Button.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Level2Button.setForeground(new java.awt.Color(255, 255, 255));
-        Level2Button.setText("Level 2");
-        Level2Button.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
-        Level2Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Level2ButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Level2Button);
-        Level2Button.setBounds(80, 400, 180, 30);
-
-        Level3Button.setBackground(new java.awt.Color(39, 43, 59));
-        Level3Button.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Level3Button.setForeground(new java.awt.Color(255, 255, 255));
-        Level3Button.setText("Level 3");
-        Level3Button.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
-        Level3Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Level3ButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Level3Button);
-        Level3Button.setBounds(80, 450, 180, 30);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         welcomeLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         welcomeLabel.setText("Welcome Mona");
-        getContentPane().add(welcomeLabel);
-        welcomeLabel.setBounds(10, 30, 110, 30);
+        getContentPane().add(welcomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 110, 30));
 
         ranking.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         ranking.setText("Ranking");
@@ -99,38 +61,72 @@ public class levels extends javax.swing.JFrame {
                 rankingMouseClicked(evt);
             }
         });
-        getContentPane().add(ranking);
-        ranking.setBounds(250, 36, 50, 20);
+        getContentPane().add(ranking, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, 20));
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel4.setText("<html> Level up!<br> Conquer the first level and unlock the next.<br>  Are you ready for the challenge?  </html?");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 190, 310, 110);
-        getContentPane().add(backGroundLabel1);
-        backGroundLabel1.setBounds(0, 0, 330, 600);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 310, 110));
 
-        setSize(new java.awt.Dimension(346, 608));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3-stars2.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 130, 120));
+
+        level1.setBackground(new java.awt.Color(39, 40, 59));
+        level1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        level1.setForeground(new java.awt.Color(255, 255, 255));
+        level1.setText("Level 1");
+        level1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                level1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(level1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 154, 30));
+
+        level2.setBackground(new java.awt.Color(39, 40, 59));
+        level2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        level2.setForeground(new java.awt.Color(255, 255, 255));
+        level2.setText("Level 2");
+        level2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                level2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(level2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 154, 30));
+
+        level3.setBackground(new java.awt.Color(39, 40, 59));
+        level3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        level3.setForeground(new java.awt.Color(255, 255, 255));
+        level3.setText("Level 3");
+        level3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                level3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(level3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 154, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/levelsBackGround.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 590));
+
+        setSize(new java.awt.Dimension(330, 602));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Level3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Level3ButtonActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_Level3ButtonActionPerformed
-
-    private void Level2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Level2ButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Level2ButtonActionPerformed
-
-    private void Level1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Level1ButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Level1ButtonActionPerformed
 
     private void rankingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rankingMouseClicked
         // TODO add your handling code here:
         
         
     }//GEN-LAST:event_rankingMouseClicked
+
+    private void level1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_level1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_level1ActionPerformed
+
+    private void level2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_level2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_level2ActionPerformed
+
+    private void level3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_level3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_level3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,11 +166,12 @@ public class levels extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Level1Button;
-    private javax.swing.JButton Level2Button;
-    private javax.swing.JButton Level3Button;
-    private javax.swing.JLabel backGroundLabel1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton level1;
+    private javax.swing.JButton level2;
+    private javax.swing.JButton level3;
     private javax.swing.JLabel ranking;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
