@@ -1,13 +1,13 @@
 
 package techie;
 
-public class Q3Level2 extends javax.swing.JFrame {
+public class Q1Level3 extends javax.swing.JFrame {
     
     
    
   
     
-    public Q3Level2() {
+    public Q1Level3() {
         initComponents();
        
        
@@ -32,14 +32,12 @@ public class Q3Level2 extends javax.swing.JFrame {
         PointsTextField = new javax.swing.JTextField();
         NextButton = new javax.swing.JButton();
         Level2Label = new javax.swing.JLabel();
-        Q3Label = new javax.swing.JLabel();
+        Q1Label = new javax.swing.JLabel();
         a4 = new javax.swing.JRadioButton();
         a3 = new javax.swing.JRadioButton();
         a1 = new javax.swing.JRadioButton();
         a2 = new javax.swing.JRadioButton();
-        q2 = new javax.swing.JLabel();
         q1 = new javax.swing.JLabel();
-        q3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,10 +82,10 @@ public class Q3Level2 extends javax.swing.JFrame {
         Level2Label.setText("Level 3");
         getContentPane().add(Level2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
 
-        Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Q3Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q3Label.setText("Q3. what is the result of 1+2?");
-        getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
+        Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        Q1Label.setForeground(new java.awt.Color(39, 40, 59));
+        Q1Label.setText("Q3. what is the result of 1+2?");
+        getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
         buttonGroup1.add(a4);
         a4.setText("jRadioButton1");
@@ -105,22 +103,12 @@ public class Q3Level2 extends javax.swing.JFrame {
         a2.setText("jRadioButton1");
         getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
-        q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        q2.setForeground(new java.awt.Color(255, 255, 255));
-        q2.setText("03");
-        getContentPane().add(q2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 40, 60));
-
         q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q1.setForeground(new java.awt.Color(255, 255, 255));
         q1.setText("01");
         getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
 
-        q3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        q3.setForeground(new java.awt.Color(255, 255, 255));
-        q3.setText("02");
-        getContentPane().add(q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q3.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q1.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         setBounds(0, 0, 330, 600);
@@ -157,14 +145,70 @@ public class Q3Level2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q1Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q1Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q1Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q1Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -177,7 +221,7 @@ public class Q3Level2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Q3Level2().setVisible(true);
+                new Q1Level3().setVisible(true);
             }
         });
     }
@@ -190,7 +234,7 @@ public class Q3Level2 extends javax.swing.JFrame {
     private javax.swing.JButton NextButton;
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
-    private javax.swing.JLabel Q3Label;
+    private javax.swing.JLabel Q1Label;
     private javax.swing.JRadioButton a1;
     private javax.swing.JRadioButton a2;
     private javax.swing.JRadioButton a3;
@@ -198,7 +242,5 @@ public class Q3Level2 extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel q1;
-    private javax.swing.JLabel q2;
-    private javax.swing.JLabel q3;
     // End of variables declaration//GEN-END:variables
 }

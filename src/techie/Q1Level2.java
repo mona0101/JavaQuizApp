@@ -32,7 +32,7 @@ public class Q1Level2 extends javax.swing.JFrame {
         PointsTextField = new javax.swing.JTextField();
         NextButton = new javax.swing.JButton();
         Num1Label = new javax.swing.JLabel();
-        Level1Label = new javax.swing.JLabel();
+        Level2Label = new javax.swing.JLabel();
         Q1Label = new javax.swing.JLabel();
         a4 = new javax.swing.JRadioButton();
         a1 = new javax.swing.JRadioButton();
@@ -82,14 +82,14 @@ public class Q1Level2 extends javax.swing.JFrame {
         Num1Label.setText("01");
         getContentPane().add(Num1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
 
-        Level1Label.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        Level1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Level1Label.setText("Level 2");
-        getContentPane().add(Level1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
+        Level2Label.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        Level2Label.setForeground(new java.awt.Color(39, 40, 59));
+        Level2Label.setText("Level 2");
+        getContentPane().add(Level2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
 
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q1Label.setText("<html>\nWhat is the decimal <br>representation of the binary<br> number 1000110100100</html>\n ?");
+        Q1Label.setText("<html> Q1. What is the decimal <br>representation of the binary<br> number 1000110100100</html>  ?");
         getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
         buttonGroup1.add(a4);
@@ -186,7 +186,7 @@ public class Q1Level2 extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HomeLabel;
-    private javax.swing.JLabel Level1Label;
+    private javax.swing.JLabel Level2Label;
     private javax.swing.JButton NextButton;
     private javax.swing.JLabel Num1Label;
     private javax.swing.JLabel PointsImageLabel;

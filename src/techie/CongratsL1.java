@@ -63,7 +63,7 @@ public class CongratsL1 extends javax.swing.JFrame {
 
         PassedLevelLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         PassedLevelLabel.setForeground(new java.awt.Color(39, 40, 59));
-        PassedLevelLabel.setText("You Passed the First Level !");
+        PassedLevelLabel.setText("You have Passed This Level !");
         getContentPane().add(PassedLevelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 190, 40));
 
         YouCollectedLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N

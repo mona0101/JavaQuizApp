@@ -18,12 +18,13 @@ public class levels extends javax.swing.JFrame {
      */
     public levels() {
         initComponents();
-      /*ImageIcon backgroundIcon = new ImageIcon("images//levelsBackGround.png");
-        Image backGroundimg = backgroundIcon.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_SMOOTH);
+      /* 
+        ImageIcon backgroundIcon = new ImageIcon("src//images//levels.png");
+        Image backGroundimg = backgroundIcon.getImage().getScaledInstance(levels.getWidth(), levels.getHeight(), Image.SCALE_SMOOTH);
         backgroundIcon = new ImageIcon(backGroundimg);
-        jLabel2.setIcon(backgroundIcon);
-   */
-       
+        levels.setIcon(backgroundIcon);
+   
+      */ 
     }
 
     /**
@@ -47,11 +48,12 @@ public class levels extends javax.swing.JFrame {
         setTitle("Techie");
         setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         setLocationByPlatform(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         welcomeLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         welcomeLabel.setText("Welcome Mona");
-        getContentPane().add(welcomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 110, 30));
+        getContentPane().add(welcomeLabel);
+        welcomeLabel.setBounds(10, 20, 110, 30);
 
         ranking.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         ranking.setText("Ranking");
@@ -60,11 +62,13 @@ public class levels extends javax.swing.JFrame {
                 rankingMouseClicked(evt);
             }
         });
-        getContentPane().add(ranking, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, 20));
+        getContentPane().add(ranking);
+        ranking.setBounds(250, 30, 50, 20);
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel4.setText("<html> Level up!<br> Conquer the first level and unlock the next.<br>  Are you ready for the challenge?  </html?");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 310, 110));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 220, 310, 110);
 
         level1.setBackground(new java.awt.Color(39, 40, 59));
         level1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -75,7 +79,8 @@ public class levels extends javax.swing.JFrame {
                 level1ActionPerformed(evt);
             }
         });
-        getContentPane().add(level1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 154, 30));
+        getContentPane().add(level1);
+        level1.setBounds(80, 340, 154, 30);
 
         level2.setBackground(new java.awt.Color(39, 40, 59));
         level2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -86,7 +91,8 @@ public class levels extends javax.swing.JFrame {
                 level2ActionPerformed(evt);
             }
         });
-        getContentPane().add(level2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 154, 30));
+        getContentPane().add(level2);
+        level2.setBounds(80, 390, 154, 30);
 
         level3.setBackground(new java.awt.Color(39, 40, 59));
         level3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -97,10 +103,12 @@ public class levels extends javax.swing.JFrame {
                 level3ActionPerformed(evt);
             }
         });
-        getContentPane().add(level3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 154, 30));
+        getContentPane().add(level3);
+        level3.setBounds(80, 440, 154, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/histogrampng.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 590));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 320, 590);
 
         setSize(new java.awt.Dimension(330, 602));
         setLocationRelativeTo(null);

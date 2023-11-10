@@ -124,7 +124,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="Level1Label">
+    <Component class="javax.swing.JLabel" name="Level2Label">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comic Sans MS" size="18" style="0"/>
@@ -148,7 +148,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3b" green="28" red="27" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;What is the decimal &lt;br&gt;representation of the binary&lt;br&gt; number 1000110100100&lt;/html&gt;&#xa; ?"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt; Q1. What is the decimal &lt;br&gt;representation of the binary&lt;br&gt; number 1000110100100&lt;/html&gt;  ?"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

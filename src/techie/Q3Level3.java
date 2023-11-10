@@ -1,13 +1,13 @@
 
 package techie;
 
-public class Q3Level2 extends javax.swing.JFrame {
+public class Q3Level3 extends javax.swing.JFrame {
     
     
    
   
     
-    public Q3Level2() {
+    public Q3Level3() {
         initComponents();
        
        
@@ -32,7 +32,7 @@ public class Q3Level2 extends javax.swing.JFrame {
         PointsTextField = new javax.swing.JTextField();
         NextButton = new javax.swing.JButton();
         Level2Label = new javax.swing.JLabel();
-        Q3Label = new javax.swing.JLabel();
+        Q1Label = new javax.swing.JLabel();
         a4 = new javax.swing.JRadioButton();
         a3 = new javax.swing.JRadioButton();
         a1 = new javax.swing.JRadioButton();
@@ -84,10 +84,10 @@ public class Q3Level2 extends javax.swing.JFrame {
         Level2Label.setText("Level 3");
         getContentPane().add(Level2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
 
-        Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        Q3Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q3Label.setText("Q3. what is the result of 1+2?");
-        getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
+        Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        Q1Label.setForeground(new java.awt.Color(39, 40, 59));
+        Q1Label.setText("Q3. what is the result of 1+2?");
+        getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
         buttonGroup1.add(a4);
         a4.setText("jRadioButton1");
@@ -157,14 +157,38 @@ public class Q3Level2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -177,7 +201,7 @@ public class Q3Level2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Q3Level2().setVisible(true);
+                new Q3Level3().setVisible(true);
             }
         });
     }
@@ -190,7 +214,7 @@ public class Q3Level2 extends javax.swing.JFrame {
     private javax.swing.JButton NextButton;
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
-    private javax.swing.JLabel Q3Label;
+    private javax.swing.JLabel Q1Label;
     private javax.swing.JRadioButton a1;
     private javax.swing.JRadioButton a2;
     private javax.swing.JRadioButton a3;

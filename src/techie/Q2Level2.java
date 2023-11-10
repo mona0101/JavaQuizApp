@@ -31,7 +31,7 @@ public class Q2Level2 extends javax.swing.JFrame {
         PointsImageLabel = new javax.swing.JLabel();
         PointsTextField = new javax.swing.JTextField();
         NextButton = new javax.swing.JButton();
-        Level1Label = new javax.swing.JLabel();
+        Level2Label = new javax.swing.JLabel();
         Q1Label = new javax.swing.JLabel();
         a4 = new javax.swing.JRadioButton();
         a3 = new javax.swing.JRadioButton();
@@ -78,10 +78,10 @@ public class Q2Level2 extends javax.swing.JFrame {
         });
         getContentPane().add(NextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 154, 30));
 
-        Level1Label.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        Level1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Level1Label.setText("Level 2");
-        getContentPane().add(Level1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
+        Level2Label.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        Level2Label.setForeground(new java.awt.Color(39, 40, 59));
+        Level2Label.setText("Level 2");
+        getContentPane().add(Level2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
 
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
@@ -176,7 +176,7 @@ public class Q2Level2 extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HomeLabel;
-    private javax.swing.JLabel Level1Label;
+    private javax.swing.JLabel Level2Label;
     private javax.swing.JButton NextButton;
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
