@@ -34,10 +34,10 @@ public class Q1Level2 extends javax.swing.JFrame {
         Num1Label = new javax.swing.JLabel();
         Level1Label = new javax.swing.JLabel();
         Q1Label = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        a4 = new javax.swing.JRadioButton();
+        a1 = new javax.swing.JRadioButton();
+        a2 = new javax.swing.JRadioButton();
+        a3 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,24 +89,34 @@ public class Q1Level2 extends javax.swing.JFrame {
 
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q1Label.setText("Q1. what is the result of 1+2?");
+        Q1Label.setText("<html>\nWhat is the decimal <br>representation of the binary<br> number 1000110100100</html>\n ?");
         getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("jRadioButton1");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, -1, -1));
+        buttonGroup1.add(a4);
+        a4.setText("4516");
+        getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("jRadioButton1");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
+        buttonGroup1.add(a1);
+        a1.setText("6951");
+        getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("jRadioButton1");
-        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
+        buttonGroup1.add(a2);
+        a2.setText("2589");
+        a2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                a2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("jRadioButton1");
-        getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, -1, -1));
+        buttonGroup1.add(a3);
+        a3.setText("987236");
+        a3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                a3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level2Q1.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
@@ -127,6 +137,14 @@ public class Q1Level2 extends javax.swing.JFrame {
         this.dispose();
         new Welcome().setVisible(true);
     }//GEN-LAST:event_HomeLabelMouseClicked
+
+    private void a2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_a2ActionPerformed
+
+    private void a3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_a3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,11 +192,11 @@ public class Q1Level2 extends javax.swing.JFrame {
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
     private javax.swing.JLabel Q1Label;
+    private javax.swing.JRadioButton a1;
+    private javax.swing.JRadioButton a2;
+    private javax.swing.JRadioButton a3;
+    private javax.swing.JRadioButton a4;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     // End of variables declaration//GEN-END:variables
 }
