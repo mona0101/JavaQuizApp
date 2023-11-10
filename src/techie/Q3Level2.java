@@ -1,13 +1,13 @@
 
 package techie;
 
-public class Q2Level2 extends javax.swing.JFrame {
+public class Q3Level2 extends javax.swing.JFrame {
     
     
    
   
     
-    public Q2Level2() {
+    public Q3Level2() {
         initComponents();
        
        
@@ -39,6 +39,7 @@ public class Q2Level2 extends javax.swing.JFrame {
         a2 = new javax.swing.JRadioButton();
         q2 = new javax.swing.JLabel();
         q1 = new javax.swing.JLabel();
+        q3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,7 +86,7 @@ public class Q2Level2 extends javax.swing.JFrame {
 
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q1Label.setText("Q2. what is the result of 1+2?");
+        Q1Label.setText("Q. what is the result of 1+2?");
         getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
         buttonGroup1.add(a4);
@@ -106,15 +107,20 @@ public class Q2Level2 extends javax.swing.JFrame {
 
         q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q2.setForeground(new java.awt.Color(255, 255, 255));
-        q2.setText("02");
-        getContentPane().add(q2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
+        q2.setText("03");
+        getContentPane().add(q2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 40, 60));
 
         q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q1.setForeground(new java.awt.Color(255, 255, 255));
         q1.setText("01");
         getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level2q2.png"))); // NOI18N
+        q3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        q3.setForeground(new java.awt.Color(255, 255, 255));
+        q3.setText("02");
+        getContentPane().add(q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/q3level2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         setBounds(0, 0, 330, 600);
@@ -151,14 +157,18 @@ public class Q2Level2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Q2Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Q2Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Q2Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Q2Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -167,7 +177,7 @@ public class Q2Level2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Q2Level2().setVisible(true);
+                new Q3Level2().setVisible(true);
             }
         });
     }
@@ -189,5 +199,6 @@ public class Q2Level2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel q1;
     private javax.swing.JLabel q2;
+    private javax.swing.JLabel q3;
     // End of variables declaration//GEN-END:variables
 }
