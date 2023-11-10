@@ -73,8 +73,8 @@ public class Welcome extends javax.swing.JFrame {
         });
         jPanel1.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 154, 30));
 
-        BackgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcomeDesign.png"))); // NOI18N
-        jPanel1.add(BackgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 600));
+        BackgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome.png"))); // NOI18N
+        jPanel1.add(BackgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 

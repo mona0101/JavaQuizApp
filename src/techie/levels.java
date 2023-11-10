@@ -38,7 +38,6 @@ public class levels extends javax.swing.JFrame {
         welcomeLabel = new javax.swing.JLabel();
         ranking = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         level1 = new javax.swing.JButton();
         level2 = new javax.swing.JButton();
         level3 = new javax.swing.JButton();
@@ -66,9 +65,6 @@ public class levels extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel4.setText("<html> Level up!<br> Conquer the first level and unlock the next.<br>  Are you ready for the challenge?  </html?");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 310, 110));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3-stars2.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 130, 120));
 
         level1.setBackground(new java.awt.Color(39, 40, 59));
         level1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -103,7 +99,7 @@ public class levels extends javax.swing.JFrame {
         });
         getContentPane().add(level3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 154, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/levelsBackGround.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/histogrampng.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 590));
 
         setSize(new java.awt.Dimension(330, 602));
@@ -167,7 +163,6 @@ public class levels extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton level1;
     private javax.swing.JButton level2;
