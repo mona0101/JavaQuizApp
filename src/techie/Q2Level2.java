@@ -114,7 +114,7 @@ public class Q2Level2 extends javax.swing.JFrame {
         q1.setText("01");
         getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level2Q1.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level2q2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         setBounds(0, 0, 330, 600);
