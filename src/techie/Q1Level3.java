@@ -10,7 +10,7 @@ public class Q1Level3 extends javax.swing.JFrame {
     public Q1Level3() {
         initComponents();
        
-       
+       code.setEditable(false);
         
        //add radio buttons to group
         
@@ -33,12 +33,10 @@ public class Q1Level3 extends javax.swing.JFrame {
         NextButton = new javax.swing.JButton();
         Level2Label = new javax.swing.JLabel();
         Q1Label = new javax.swing.JLabel();
-        a4 = new javax.swing.JRadioButton();
-        a3 = new javax.swing.JRadioButton();
-        a1 = new javax.swing.JRadioButton();
-        a2 = new javax.swing.JRadioButton();
         q1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        code = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -84,32 +82,30 @@ public class Q1Level3 extends javax.swing.JFrame {
 
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q1Label.setText("Q3. what is the result of 1+2?");
-        getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
-
-        buttonGroup1.add(a4);
-        a4.setText("jRadioButton1");
-        getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
-
-        buttonGroup1.add(a3);
-        a3.setText("jRadioButton1");
-        getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
-
-        buttonGroup1.add(a1);
-        a1.setText("jRadioButton1");
-        getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
-
-        buttonGroup1.add(a2);
-        a2.setText("jRadioButton1");
-        getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+        Q1Label.setText("Q1. What is the output?");
+        getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 220, -1));
 
         q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q1.setForeground(new java.awt.Color(255, 255, 255));
         q1.setText("01");
         getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q1.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
+        code.setBackground(new java.awt.Color(255, 254, 250));
+        code.setColumns(20);
+        code.setLineWrap(true);
+        code.setRows(5);
+        code.setText("class Main {\n    public static void main(String args[]) {\n          Main obj = new Main();\n        System.out.println(obj.fun());\n    } \n    int fun() {\n        return 20;\n    }\n}");
+        code.setToolTipText("");
+        code.setBorder(null);
+        code.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        code.setDisabledTextColor(new java.awt.Color(255, 204, 204));
+        jScrollPane1.setViewportView(code);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, 150));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q1.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 590));
 
         setBounds(0, 0, 330, 600);
     }// </editor-fold>//GEN-END:initComponents
@@ -235,12 +231,10 @@ public class Q1Level3 extends javax.swing.JFrame {
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
     private javax.swing.JLabel Q1Label;
-    private javax.swing.JRadioButton a1;
-    private javax.swing.JRadioButton a2;
-    private javax.swing.JRadioButton a3;
-    private javax.swing.JRadioButton a4;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextArea code;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel q1;
     // End of variables declaration//GEN-END:variables
 }
