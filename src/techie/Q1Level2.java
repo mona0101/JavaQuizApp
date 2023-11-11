@@ -31,14 +31,14 @@ public class Q1Level2 extends javax.swing.JFrame {
         PointsImageLabel = new javax.swing.JLabel();
         PointsTextField = new javax.swing.JTextField();
         NextButton = new javax.swing.JButton();
-        Num1Label = new javax.swing.JLabel();
+        q1Label = new javax.swing.JLabel();
         Level2Label = new javax.swing.JLabel();
         Q1Label = new javax.swing.JLabel();
         a4 = new javax.swing.JRadioButton();
         a1 = new javax.swing.JRadioButton();
         a2 = new javax.swing.JRadioButton();
         a3 = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
+        backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -77,10 +77,10 @@ public class Q1Level2 extends javax.swing.JFrame {
         });
         getContentPane().add(NextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 154, 30));
 
-        Num1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        Num1Label.setForeground(new java.awt.Color(255, 255, 255));
-        Num1Label.setText("01");
-        getContentPane().add(Num1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
+        q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        q1Label.setForeground(new java.awt.Color(255, 255, 255));
+        q1Label.setText("01");
+        getContentPane().add(q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
 
         Level2Label.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         Level2Label.setForeground(new java.awt.Color(39, 40, 59));
@@ -118,10 +118,11 @@ public class Q1Level2 extends javax.swing.JFrame {
         });
         getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level2Q1.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
+        backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level2Q1.png"))); // NOI18N
+        getContentPane().add(backGroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
-        setBounds(0, 0, 330, 600);
+        setSize(new java.awt.Dimension(330, 600));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
@@ -188,7 +189,6 @@ public class Q1Level2 extends javax.swing.JFrame {
     private javax.swing.JLabel HomeLabel;
     private javax.swing.JLabel Level2Label;
     private javax.swing.JButton NextButton;
-    private javax.swing.JLabel Num1Label;
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
     private javax.swing.JLabel Q1Label;
@@ -196,7 +196,8 @@ public class Q1Level2 extends javax.swing.JFrame {
     private javax.swing.JRadioButton a2;
     private javax.swing.JRadioButton a3;
     private javax.swing.JRadioButton a4;
+    private javax.swing.JLabel backGroundLabel;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel q1Label;
     // End of variables declaration//GEN-END:variables
 }

@@ -39,7 +39,7 @@ public class Q2Level3 extends javax.swing.JFrame {
         a2 = new javax.swing.JRadioButton();
         q1 = new javax.swing.JLabel();
         q3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        backgroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,8 +114,8 @@ public class Q2Level3 extends javax.swing.JFrame {
         q3.setText("02");
         getContentPane().add(q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q2.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
+        backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q2.png"))); // NOI18N
+        getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         setBounds(0, 0, 330, 600);
     }// </editor-fold>//GEN-END:initComponents
@@ -245,8 +245,8 @@ public class Q2Level3 extends javax.swing.JFrame {
     private javax.swing.JRadioButton a2;
     private javax.swing.JRadioButton a3;
     private javax.swing.JRadioButton a4;
+    private javax.swing.JLabel backgroundLabel;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel q1;
     private javax.swing.JLabel q3;
     // End of variables declaration//GEN-END:variables

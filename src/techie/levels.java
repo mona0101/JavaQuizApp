@@ -38,11 +38,11 @@ public class levels extends javax.swing.JFrame {
 
         welcomeLabel = new javax.swing.JLabel();
         ranking = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        discriptionLabel = new javax.swing.JLabel();
         level1 = new javax.swing.JButton();
         level2 = new javax.swing.JButton();
         level3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        backGroundLable = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Techie");
@@ -65,10 +65,10 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(ranking);
         ranking.setBounds(250, 30, 50, 20);
 
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jLabel4.setText("<html> Level up!<br> Conquer the first level and unlock the next.<br>  Are you ready for the challenge?  </html?");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 220, 310, 110);
+        discriptionLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        discriptionLabel.setText("<html> Level up!<br> Conquer the first level and unlock the next.<br>  Are you ready for the challenge?  </html?");
+        getContentPane().add(discriptionLabel);
+        discriptionLabel.setBounds(10, 220, 310, 110);
 
         level1.setBackground(new java.awt.Color(39, 40, 59));
         level1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -106,9 +106,9 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(level3);
         level3.setBounds(80, 440, 154, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/histogrampng.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 320, 590);
+        backGroundLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/histogrampng.png"))); // NOI18N
+        getContentPane().add(backGroundLable);
+        backGroundLable.setBounds(0, 0, 320, 590);
 
         setSize(new java.awt.Dimension(330, 602));
         setLocationRelativeTo(null);
@@ -170,8 +170,8 @@ public class levels extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel backGroundLable;
+    private javax.swing.JLabel discriptionLabel;
     private javax.swing.JButton level1;
     private javax.swing.JButton level2;
     private javax.swing.JButton level3;

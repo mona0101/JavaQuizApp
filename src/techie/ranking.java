@@ -28,8 +28,8 @@ public class ranking extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        ranking = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        rankingLabel = new javax.swing.JLabel();
+        backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -51,28 +51,28 @@ public class ranking extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(20, 180, 290, 220);
 
-        ranking.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        ranking.setText("Ranking");
-        ranking.addMouseListener(new java.awt.event.MouseAdapter() {
+        rankingLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        rankingLabel.setText("Ranking");
+        rankingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                rankingMouseClicked(evt);
+                rankingLabelMouseClicked(evt);
             }
         });
-        getContentPane().add(ranking);
-        ranking.setBounds(120, 50, 90, 40);
+        getContentPane().add(rankingLabel);
+        rankingLabel.setBounds(120, 50, 90, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ranking.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 330, 600);
+        backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ranking.png"))); // NOI18N
+        backGroundLabel.setText("jLabel1");
+        getContentPane().add(backGroundLabel);
+        backGroundLabel.setBounds(0, 0, 330, 600);
 
         setSize(new java.awt.Dimension(346, 608));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rankingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rankingMouseClicked
+    private void rankingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rankingLabelMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_rankingMouseClicked
+    }//GEN-LAST:event_rankingLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -110,9 +110,9 @@ public class ranking extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel backGroundLabel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel ranking;
+    private javax.swing.JLabel rankingLabel;
     // End of variables declaration//GEN-END:variables
 }

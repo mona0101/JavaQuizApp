@@ -40,7 +40,7 @@ public class Q3Level2 extends javax.swing.JFrame {
         q2 = new javax.swing.JLabel();
         q1 = new javax.swing.JLabel();
         q3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -81,7 +81,7 @@ public class Q3Level2 extends javax.swing.JFrame {
 
         Level2Label.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         Level2Label.setForeground(new java.awt.Color(39, 40, 59));
-        Level2Label.setText("Level 3");
+        Level2Label.setText("Level 2");
         getContentPane().add(Level2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
 
         Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -120,8 +120,8 @@ public class Q3Level2 extends javax.swing.JFrame {
         q3.setText("02");
         getContentPane().add(q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q3.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
+        backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/q3level2.png"))); // NOI18N
+        getContentPane().add(backGroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         setBounds(0, 0, 330, 600);
     }// </editor-fold>//GEN-END:initComponents
@@ -195,8 +195,8 @@ public class Q3Level2 extends javax.swing.JFrame {
     private javax.swing.JRadioButton a2;
     private javax.swing.JRadioButton a3;
     private javax.swing.JRadioButton a4;
+    private javax.swing.JLabel backGroundLabel;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel q1;
     private javax.swing.JLabel q2;
     private javax.swing.JLabel q3;
