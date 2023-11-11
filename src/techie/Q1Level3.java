@@ -1,20 +1,14 @@
-
 package techie;
 
 public class Q1Level3 extends javax.swing.JFrame {
     
-    
-   
-  
-    
     public Q1Level3() {
         initComponents();
-       
-       code.setEditable(false);
         
-       //add radio buttons to group
-        
-    
+        code.setEditable(false);
+        code.setBorder(null);
+
+        //add radio buttons to group
     }
 
     /**
@@ -34,6 +28,8 @@ public class Q1Level3 extends javax.swing.JFrame {
         Level2Label = new javax.swing.JLabel();
         Q1Label = new javax.swing.JLabel();
         q1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         code = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -83,12 +79,27 @@ public class Q1Level3 extends javax.swing.JFrame {
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
         Q1Label.setText("Q1. What is the output?");
-        getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 220, -1));
+        getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 220, -1));
 
         q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q1.setForeground(new java.awt.Color(255, 255, 255));
         q1.setText("01");
         getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
+
+        jTextField1.setBackground(new java.awt.Color(255, 254, 250));
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setText("20");
+        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 100, 30));
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel2.setText("Enter the the answer :");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 170, 30));
 
         code.setBackground(new java.awt.Color(255, 254, 250));
         code.setColumns(20);
@@ -96,7 +107,8 @@ public class Q1Level3 extends javax.swing.JFrame {
         code.setRows(5);
         code.setText("class Main {\n    public static void main(String args[]) {\n          Main obj = new Main();\n        System.out.println(obj.fun());\n    } \n    int fun() {\n        return 20;\n    }\n}");
         code.setToolTipText("");
-        code.setBorder(null);
+        code.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        code.setCaretColor(new java.awt.Color(255, 255, 255));
         code.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         code.setDisabledTextColor(new java.awt.Color(255, 204, 204));
         jScrollPane1.setViewportView(code);
@@ -124,15 +136,15 @@ public class Q1Level3 extends javax.swing.JFrame {
         new Welcome().setVisible(true);
     }//GEN-LAST:event_HomeLabelMouseClicked
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -150,69 +162,7 @@ public class Q1Level3 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Q1Level3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -222,8 +172,7 @@ public class Q1Level3 extends javax.swing.JFrame {
         });
     }
 
- 
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HomeLabel;
     private javax.swing.JLabel Level2Label;
@@ -234,7 +183,9 @@ public class Q1Level3 extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextArea code;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel q1;
     // End of variables declaration//GEN-END:variables
 }
