@@ -1,12 +1,14 @@
 package techie;
 
+import javax.swing.border.EmptyBorder;
+
 public class Q1Level3 extends javax.swing.JFrame {
     
     public Q1Level3() {
         initComponents();
-        
+     PointsTextField.setEditable(false);
         code.setEditable(false);
-        code.setBorder(null);
+        code.setBorder(new EmptyBorder(0, 0, 0, 0));
 
         //add radio buttons to group
     }
@@ -28,8 +30,8 @@ public class Q1Level3 extends javax.swing.JFrame {
         Level2Label = new javax.swing.JLabel();
         Q1Label = new javax.swing.JLabel();
         q1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         code = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
@@ -78,7 +80,7 @@ public class Q1Level3 extends javax.swing.JFrame {
 
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q1Label.setText("Q1. What is the output?");
+        Q1Label.setText("Q1. What is The Output?");
         getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 220, -1));
 
         q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
@@ -86,40 +88,39 @@ public class Q1Level3 extends javax.swing.JFrame {
         q1.setText("01");
         getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
 
-        jTextField1.setBackground(new java.awt.Color(255, 254, 250));
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel2.setText("Enter The Answer:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 140, 30));
+
+        jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("20");
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField1.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 100, 30));
-
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jLabel2.setText("Enter the the answer :");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 170, 30));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 90, 30));
 
         code.setBackground(new java.awt.Color(255, 254, 250));
         code.setColumns(20);
-        code.setLineWrap(true);
         code.setRows(5);
         code.setText("class Main {\n    public static void main(String args[]) {\n          Main obj = new Main();\n        System.out.println(obj.fun());\n    } \n    int fun() {\n        return 20;\n    }\n}");
         code.setToolTipText("");
-        code.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        code.setBorder(null);
         code.setCaretColor(new java.awt.Color(255, 255, 255));
         code.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         code.setDisabledTextColor(new java.awt.Color(255, 204, 204));
         jScrollPane1.setViewportView(code);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, 150));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 230, 160));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q1.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 590));
 
-        setBounds(0, 0, 330, 600);
+        setSize(new java.awt.Dimension(330, 600));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed

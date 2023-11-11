@@ -10,7 +10,7 @@ public class Q2Level2 extends javax.swing.JFrame {
     public Q2Level2() {
         initComponents();
        
-       
+        PointsTextField.setEditable(false);
         
        //add radio buttons to group
         
