@@ -1,14 +1,21 @@
 package techie;
 
-import javax.swing.border.EmptyBorder;
 
 public class Q1Level3 extends javax.swing.JFrame {
     
     public Q1Level3() {
         initComponents();
      PointsTextField.setEditable(false);
-        code.setEditable(false);
-        code.setBorder(new EmptyBorder(0, 0, 0, 0));
+      code.setEditable(false);
+      
+    
+     jScrollPane1.setBorder(null);
+     
+     
+     
+            
+       
+        
 
         //add radio buttons to group
     }
@@ -86,10 +93,10 @@ public class Q1Level3 extends javax.swing.JFrame {
         q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q1.setForeground(new java.awt.Color(255, 255, 255));
         q1.setText("01");
-        getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 30, 40));
+        getContentPane().add(q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 30, 50));
 
         enterLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        enterLabel.setText("Enter The Answer:");
+        enterLabel.setText("Enter Your Answer:");
         getContentPane().add(enterLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 140, 30));
 
         jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N

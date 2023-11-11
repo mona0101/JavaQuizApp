@@ -4,10 +4,7 @@
  */
 package techie;
 
-/**
- *
- * @author abdul
- */
+
 public class ranking extends javax.swing.JFrame {
 
     /**
@@ -15,6 +12,8 @@ public class ranking extends javax.swing.JFrame {
      */
     public ranking() {
         initComponents();
+         jScrollPane1.setBorder(null);
+        
     }
 
     /**
@@ -34,22 +33,34 @@ public class ranking extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTable1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTable1.setBackground(new java.awt.Color(255, 254, 250));
+        jTable1.setForeground(new java.awt.Color(255, 254, 250));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "UserName", "Points"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setGridColor(new java.awt.Color(255, 254, 250));
+        jTable1.setSelectionBackground(new java.awt.Color(255, 254, 250));
+        jTable1.setSelectionForeground(new java.awt.Color(255, 254, 250));
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 180, 290, 220);
+        jScrollPane1.setBounds(20, 200, 280, 90);
 
         rankingLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         rankingLabel.setText("Ranking");
