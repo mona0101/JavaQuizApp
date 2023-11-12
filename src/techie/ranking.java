@@ -4,6 +4,10 @@
  */
 package techie;
 
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.table.JTableHeader;
+
 
 public class ranking extends javax.swing.JFrame {
 
@@ -12,8 +16,19 @@ public class ranking extends javax.swing.JFrame {
      */
     public ranking() {
         initComponents();
-         jScrollPane1.setBorder(null);
-        
+        jScrollPane2.setBorder(null);
+        jTable.getTableHeader().setOpaque(false);
+        jTable.getTableHeader().setBackground(new Color(255,254,250));
+         
+    // JTableHeader header = jTable.getTableHeader();
+      //header.setBackground(new Color(255,254,250));
+      
+         
+         
+         jTable.getTableHeader().setFont(new Font("Comic Sans MS",Font.BOLD,14));
+         jTable.getTableHeader().setForeground(new Color(0,0,0));
+     
+         
     }
 
     /**
@@ -25,42 +40,13 @@ public class ranking extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         rankingLabel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable = new javax.swing.JTable();
         backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        jTable1.setBackground(new java.awt.Color(255, 254, 250));
-        jTable1.setForeground(new java.awt.Color(255, 254, 250));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "UserName", "Points"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable1.setGridColor(new java.awt.Color(255, 254, 250));
-        jTable1.setSelectionBackground(new java.awt.Color(255, 254, 250));
-        jTable1.setSelectionForeground(new java.awt.Color(255, 254, 250));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 200, 280, 90);
 
         rankingLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         rankingLabel.setText("Ranking");
@@ -71,6 +57,32 @@ public class ranking extends javax.swing.JFrame {
         });
         getContentPane().add(rankingLabel);
         rankingLabel.setBounds(120, 50, 90, 40);
+
+        jScrollPane2.setBackground(new java.awt.Color(255, 255, 204));
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setDebugGraphicsOptions(javax.swing.DebugGraphics.LOG_OPTION);
+
+        jTable.setBackground(new java.awt.Color(255, 254, 250));
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2"
+            }
+        ));
+        jTable.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        jTable.setRowHeight(25);
+        jTable.setSelectionBackground(new java.awt.Color(255, 254, 250));
+        jTable.getTableHeader().setResizingAllowed(false);
+        jTable.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(jTable);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(20, 190, 280, 110);
 
         backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ranking.png"))); // NOI18N
         backGroundLabel.setText("jLabel1");
@@ -122,8 +134,8 @@ public class ranking extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backGroundLabel;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable;
     private javax.swing.JLabel rankingLabel;
     // End of variables declaration//GEN-END:variables
 }
