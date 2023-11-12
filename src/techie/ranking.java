@@ -5,8 +5,9 @@
 package techie;
 
 import java.awt.Color;
-import java.awt.Font;
-import javax.swing.table.JTableHeader;
+
+import javax.swing.table.DefaultTableCellRenderer;
+
 
 
 public class ranking extends javax.swing.JFrame {
@@ -17,17 +18,13 @@ public class ranking extends javax.swing.JFrame {
     public ranking() {
         initComponents();
         jScrollPane2.setBorder(null);
-        jTable.getTableHeader().setOpaque(false);
-        jTable.getTableHeader().setBackground(new Color(255,254,250));
-         
-    // JTableHeader header = jTable.getTableHeader();
-      //header.setBackground(new Color(255,254,250));
-      
-         
-         
-         jTable.getTableHeader().setFont(new Font("Comic Sans MS",Font.BOLD,14));
-         jTable.getTableHeader().setForeground(new Color(0,0,0));
-     
+        DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
+        headerRenderer.setBackground(new Color(255,254,250));
+        jTable.getColumnModel().getColumn(0).setHeaderRenderer(headerRenderer);
+        jTable.getColumnModel().getColumn(1).setHeaderRenderer(headerRenderer);
+
+        
+ 
          
     }
 
@@ -56,13 +53,16 @@ public class ranking extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rankingLabel);
-        rankingLabel.setBounds(120, 50, 90, 40);
+        rankingLabel.setBounds(120, 60, 90, 40);
 
-        jScrollPane2.setBackground(new java.awt.Color(255, 255, 204));
+        jScrollPane2.setBackground(new java.awt.Color(255, 255, 250));
         jScrollPane2.setBorder(null);
-        jScrollPane2.setDebugGraphicsOptions(javax.swing.DebugGraphics.LOG_OPTION);
+        jScrollPane2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane2.setHorizontalScrollBar(null);
 
+        jTable.setAutoCreateRowSorter(true);
         jTable.setBackground(new java.awt.Color(255, 254, 250));
+        jTable.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -71,7 +71,7 @@ public class ranking extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "Title 1", "Title 2"
+                "UserName", "Points"
             }
         ));
         jTable.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
@@ -82,7 +82,7 @@ public class ranking extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(20, 190, 280, 110);
+        jScrollPane2.setBounds(90, 190, 200, 250);
 
         backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ranking.png"))); // NOI18N
         backGroundLabel.setText("jLabel1");
