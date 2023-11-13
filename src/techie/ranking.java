@@ -6,7 +6,8 @@ package techie;
 
 import java.awt.Color;
 
-import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.*;
+
 
 
 
@@ -22,9 +23,14 @@ public class ranking extends javax.swing.JFrame {
         headerRenderer.setBackground(new Color(255,254,250));
         jTable.getColumnModel().getColumn(0).setHeaderRenderer(headerRenderer);
         jTable.getColumnModel().getColumn(1).setHeaderRenderer(headerRenderer);
-
+        jTable.getColumnModel().getColumn(2).setHeaderRenderer(headerRenderer);
         
- 
+          TableColumnModel col = jTable.getColumnModel();
+          TableColumn rank=col.getColumn(0); rank.setPreferredWidth(2);
+          TableColumn pints=col.getColumn(2);  pints.setPreferredWidth(2);
+         
+          
+           
          
     }
 
@@ -57,45 +63,69 @@ public class ranking extends javax.swing.JFrame {
 
         jScrollPane2.setBackground(new java.awt.Color(255, 255, 250));
         jScrollPane2.setBorder(null);
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane2.setHorizontalScrollBar(null);
 
         jTable.setAutoCreateRowSorter(true);
         jTable.setBackground(new java.awt.Color(255, 254, 250));
-        jTable.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jTable.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "UserName", "Points"
+                "Rating", "   Username", "Points"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jTable.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         jTable.setRowHeight(25);
         jTable.setSelectionBackground(new java.awt.Color(255, 254, 250));
         jTable.getTableHeader().setResizingAllowed(false);
         jTable.getTableHeader().setReorderingAllowed(false);
+        jTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(90, 190, 200, 250);
+        jScrollPane2.setBounds(30, 190, 270, 250);
 
         backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ranking.png"))); // NOI18N
         backGroundLabel.setText("jLabel1");
         getContentPane().add(backGroundLabel);
         backGroundLabel.setBounds(0, 0, 330, 600);
 
-        setSize(new java.awt.Dimension(346, 608));
+        setSize(new java.awt.Dimension(347, 608));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void rankingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rankingLabelMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_rankingLabelMouseClicked
+
+    private void jTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTableMouseClicked
 
     /**
      * @param args the command line arguments
