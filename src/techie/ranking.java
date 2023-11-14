@@ -2,6 +2,7 @@
 package techie;
 
 import java.awt.Color;
+import java.awt.Font;
 
 
 import javax.swing.table.*;
@@ -19,6 +20,8 @@ public class ranking extends javax.swing.JFrame {
        // jScrollPane2.setBorder(null);
         DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
         headerRenderer.setBackground(new Color(255,254,250));
+      
+        
         jTable1.getColumnModel().getColumn(0).setHeaderRenderer(headerRenderer);
         jTable1.getColumnModel().getColumn(1).setHeaderRenderer(headerRenderer);
         jTable1.getColumnModel().getColumn(2).setHeaderRenderer(headerRenderer);
@@ -60,14 +63,14 @@ public class ranking extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rankingLabel);
-        rankingLabel.setBounds(120, 60, 90, 40);
+        rankingLabel.setBounds(110, 60, 90, 40);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         jTable1.setBackground(new java.awt.Color(255, 254, 250));
-        jTable1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Comic Sans MS", 0, 15)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -96,7 +99,7 @@ public class ranking extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(30, 200, 270, 180);
 
-        backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ranking.png"))); // NOI18N
+        backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rank3.png"))); // NOI18N
         backGroundLabel.setText("jLabel1");
         getContentPane().add(backGroundLabel);
         backGroundLabel.setBounds(0, 0, 330, 600);

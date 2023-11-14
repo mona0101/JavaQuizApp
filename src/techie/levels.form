@@ -76,7 +76,7 @@
     <Component class="javax.swing.JButton" name="level1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="c5" red="de" type="rgb"/>
+          <Color blue="c5" green="a4" red="8d" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comic Sans MS" size="14" style="1"/>
@@ -98,7 +98,7 @@
     <Component class="javax.swing.JButton" name="level2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="c5" red="de" type="rgb"/>
+          <Color blue="c5" green="a4" red="8d" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comic Sans MS" size="14" style="1"/>
@@ -120,7 +120,7 @@
     <Component class="javax.swing.JButton" name="level3">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="c5" red="de" type="rgb"/>
+          <Color blue="c5" green="a4" red="8d" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comic Sans MS" size="14" style="1"/>

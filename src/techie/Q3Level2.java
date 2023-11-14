@@ -128,7 +128,8 @@ public class Q3Level2 extends javax.swing.JFrame {
         backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/q3level2.png"))); // NOI18N
         getContentPane().add(backGroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
-        setBounds(0, 0, 330, 600);
+        setSize(new java.awt.Dimension(330, 600));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed

@@ -70,7 +70,7 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(discriptionLabel);
         discriptionLabel.setBounds(40, 190, 230, 130);
 
-        level1.setBackground(new java.awt.Color(222, 197, 204));
+        level1.setBackground(new java.awt.Color(141, 164, 197));
         level1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         level1.setForeground(new java.awt.Color(255, 255, 255));
         level1.setText("Level 1");
@@ -82,7 +82,7 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(level1);
         level1.setBounds(80, 340, 154, 30);
 
-        level2.setBackground(new java.awt.Color(222, 197, 204));
+        level2.setBackground(new java.awt.Color(141, 164, 197));
         level2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         level2.setForeground(new java.awt.Color(255, 255, 255));
         level2.setText("Level 2");
@@ -94,7 +94,7 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(level2);
         level2.setBounds(80, 390, 154, 30);
 
-        level3.setBackground(new java.awt.Color(222, 197, 204));
+        level3.setBackground(new java.awt.Color(141, 164, 197));
         level3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         level3.setForeground(new java.awt.Color(255, 255, 255));
         level3.setText("Level 3");
