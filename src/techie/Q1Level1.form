@@ -112,7 +112,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3b" green="28" red="27" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="  4"/>
+        <Property name="text" type="java.lang.String" value="Fn = Fn+1 - Fn+2"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Choice4RadioButtonActionPerformed"/>
@@ -131,8 +131,12 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3b" green="28" red="27" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="  6"/>
+        <Property name="text" type="java.lang.String" value="Fn= Fn+1+ Fn+2"/>
+        <Property name="actionCommand" type="java.lang.String" value="Fn = Fn+1 + Fn+2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Choice3RadioButtonActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="310" width="-1" height="-1"/>
@@ -147,7 +151,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3b" green="28" red="27" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="  3"/>
+        <Property name="text" type="java.lang.String" value="Fn=Fn-1- Fn-2 "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Choice2RadioButtonActionPerformed"/>
@@ -166,7 +170,8 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3b" green="28" red="27" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="  2"/>
+        <Property name="text" type="java.lang.String" value="Fn = Fn-1+Fn-2 "/>
+        <Property name="actionCommand" type="java.lang.String" value="Fn = Fn-1+ Fn-2 "/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Choice1RadioButtonActionPerformed"/>
@@ -217,7 +222,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3b" green="28" red="27" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Q1. what is the result of 1+2?"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;Q1.The Fibonacci Sequence &lt;br&gt; Formula is&lt;/html&gt;"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -68,9 +68,9 @@ public class levels extends javax.swing.JFrame {
         discriptionLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         discriptionLabel.setText("<html> Level up!<br> Conquer the first level and unlock the next.<br>  Are you ready for the challenge?  </html?");
         getContentPane().add(discriptionLabel);
-        discriptionLabel.setBounds(10, 220, 310, 110);
+        discriptionLabel.setBounds(40, 190, 230, 130);
 
-        level1.setBackground(new java.awt.Color(39, 40, 59));
+        level1.setBackground(new java.awt.Color(222, 197, 204));
         level1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         level1.setForeground(new java.awt.Color(255, 255, 255));
         level1.setText("Level 1");
@@ -82,7 +82,7 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(level1);
         level1.setBounds(80, 340, 154, 30);
 
-        level2.setBackground(new java.awt.Color(39, 40, 59));
+        level2.setBackground(new java.awt.Color(222, 197, 204));
         level2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         level2.setForeground(new java.awt.Color(255, 255, 255));
         level2.setText("Level 2");
@@ -94,7 +94,7 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(level2);
         level2.setBounds(80, 390, 154, 30);
 
-        level3.setBackground(new java.awt.Color(39, 40, 59));
+        level3.setBackground(new java.awt.Color(222, 197, 204));
         level3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         level3.setForeground(new java.awt.Color(255, 255, 255));
         level3.setText("Level 3");
@@ -106,7 +106,7 @@ public class levels extends javax.swing.JFrame {
         getContentPane().add(level3);
         level3.setBounds(80, 440, 154, 30);
 
-        backGroundLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/histogrampng.png"))); // NOI18N
+        backGroundLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/5stars.png"))); // NOI18N
         getContentPane().add(backGroundLable);
         backGroundLable.setBounds(0, 0, 320, 590);
 

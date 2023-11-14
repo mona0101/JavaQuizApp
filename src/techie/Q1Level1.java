@@ -89,7 +89,7 @@ public class Q1Level1 extends javax.swing.JFrame {
 
         Choice4RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice4RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice4RadioButton.setText("  4");
+        Choice4RadioButton.setText("Fn = Fn+1 - Fn+2");
         Choice4RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice4RadioButtonActionPerformed(evt);
@@ -99,12 +99,18 @@ public class Q1Level1 extends javax.swing.JFrame {
 
         Choice3RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice3RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice3RadioButton.setText("  6");
+        Choice3RadioButton.setText("Fn= Fn+1+ Fn+2");
+        Choice3RadioButton.setActionCommand("Fn = Fn+1 + Fn+2");
+        Choice3RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Choice3RadioButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(Choice3RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         Choice2RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice2RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice2RadioButton.setText("  3");
+        Choice2RadioButton.setText("Fn=Fn-1- Fn-2 ");
         Choice2RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice2RadioButtonActionPerformed(evt);
@@ -114,7 +120,8 @@ public class Q1Level1 extends javax.swing.JFrame {
 
         Choice1RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice1RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice1RadioButton.setText("  2");
+        Choice1RadioButton.setText("Fn = Fn-1+Fn-2 ");
+        Choice1RadioButton.setActionCommand("Fn = Fn-1+ Fn-2 ");
         Choice1RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice1RadioButtonActionPerformed(evt);
@@ -134,7 +141,7 @@ public class Q1Level1 extends javax.swing.JFrame {
 
         Q1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q1Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q1Label.setText("Q1. what is the result of 1+2?");
+        Q1Label.setText("<html>Q1.The Fibonacci Sequence <br> Formula is</html>");
         getContentPane().add(Q1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/L1Q1.png"))); // NOI18N
@@ -168,6 +175,10 @@ public class Q1Level1 extends javax.swing.JFrame {
         this.dispose();
         new Welcome().setVisible(true);
     }//GEN-LAST:event_HomeLabelMouseClicked
+
+    private void Choice3RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Choice3RadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Choice3RadioButtonActionPerformed
 
     /**
      * @param args the command line arguments

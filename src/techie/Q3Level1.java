@@ -84,12 +84,12 @@ public class Q3Level1 extends javax.swing.JFrame {
 
         Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q3Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q3Label.setText("Q3. what is the result of 1+2?");
+        Q3Label.setText("<html>Q3.When an object is passed<br> as an argument to a method,<br> this is actually passed ? </html>");
         getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
 
         Choice1RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice1RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice1RadioButton.setText("  2");
+        Choice1RadioButton.setText(" a copy of the object");
         Choice1RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice1RadioButtonActionPerformed(evt);
@@ -99,7 +99,7 @@ public class Q3Level1 extends javax.swing.JFrame {
 
         Choice2RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice2RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice2RadioButton.setText("  3");
+        Choice2RadioButton.setText(" the name of the object");
         Choice2RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice2RadioButtonActionPerformed(evt);
@@ -109,12 +109,18 @@ public class Q3Level1 extends javax.swing.JFrame {
 
         Choice3RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice3RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice3RadioButton.setText("  6");
+        Choice3RadioButton.setSelected(true);
+        Choice3RadioButton.setText("a reference to the object");
+        Choice3RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Choice3RadioButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(Choice3RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         Choice4RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice4RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice4RadioButton.setText("  4");
+        Choice4RadioButton.setText(" you cannot pass an object");
         Choice4RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice4RadioButtonActionPerformed(evt);
@@ -179,6 +185,10 @@ public class Q3Level1 extends javax.swing.JFrame {
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NextButtonActionPerformed
+
+    private void Choice3RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Choice3RadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Choice3RadioButtonActionPerformed
 
     /**
      * @param args the command line arguments
