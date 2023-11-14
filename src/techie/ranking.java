@@ -1,10 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package techie;
 
 import java.awt.Color;
+
 
 import javax.swing.table.*;
 
@@ -18,20 +16,23 @@ public class ranking extends javax.swing.JFrame {
      */
     public ranking() {
         initComponents();
-        jScrollPane2.setBorder(null);
+       // jScrollPane2.setBorder(null);
         DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
         headerRenderer.setBackground(new Color(255,254,250));
-        jTable.getColumnModel().getColumn(0).setHeaderRenderer(headerRenderer);
-        jTable.getColumnModel().getColumn(1).setHeaderRenderer(headerRenderer);
-        jTable.getColumnModel().getColumn(2).setHeaderRenderer(headerRenderer);
+        jTable1.getColumnModel().getColumn(0).setHeaderRenderer(headerRenderer);
+        jTable1.getColumnModel().getColumn(1).setHeaderRenderer(headerRenderer);
+        jTable1.getColumnModel().getColumn(2).setHeaderRenderer(headerRenderer);
         
-          TableColumnModel col = jTable.getColumnModel();
+          TableColumnModel col = jTable1.getColumnModel();
           TableColumn rank=col.getColumn(0); rank.setPreferredWidth(2);
           TableColumn pints=col.getColumn(2);  pints.setPreferredWidth(2);
-         
-          
-           
-         
+
+ 
+          DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
+          for(int i=0 ; i<15; i++){
+            model.insertRow(i,new Object[]{25,"John", 25});
+          }
+            
     }
 
     /**
@@ -44,8 +45,8 @@ public class ranking extends javax.swing.JFrame {
     private void initComponents() {
 
         rankingLabel = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,54 +62,39 @@ public class ranking extends javax.swing.JFrame {
         getContentPane().add(rankingLabel);
         rankingLabel.setBounds(120, 60, 90, 40);
 
-        jScrollPane2.setBackground(new java.awt.Color(255, 255, 250));
-        jScrollPane2.setBorder(null);
-        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        jScrollPane2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jScrollPane2.setHorizontalScrollBar(null);
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jTable.setAutoCreateRowSorter(true);
-        jTable.setBackground(new java.awt.Color(255, 254, 250));
-        jTable.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
-        jTable.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setBackground(new java.awt.Color(255, 254, 250));
+        jTable1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Rating", "   Username", "Points"
+                "Rank", "Username", "Points"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
-        });
-        jTable.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        jTable.setRowHeight(25);
-        jTable.setSelectionBackground(new java.awt.Color(255, 254, 250));
-        jTable.getTableHeader().setResizingAllowed(false);
-        jTable.getTableHeader().setReorderingAllowed(false);
-        jTable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTableMouseClicked(evt);
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable);
+        jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(30, 190, 270, 250);
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(30, 200, 270, 180);
 
         backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ranking.png"))); // NOI18N
         backGroundLabel.setText("jLabel1");
@@ -122,10 +108,6 @@ public class ranking extends javax.swing.JFrame {
     private void rankingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rankingLabelMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_rankingLabelMouseClicked
-
-    private void jTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTableMouseClicked
 
     /**
      * @param args the command line arguments
@@ -164,8 +146,8 @@ public class ranking extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backGroundLabel;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel rankingLabel;
     // End of variables declaration//GEN-END:variables
 }

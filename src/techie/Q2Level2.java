@@ -83,25 +83,25 @@ public class Q2Level2 extends javax.swing.JFrame {
         Level2Label.setText("Level 2");
         getContentPane().add(Level2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
 
-        Q2Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        Q2Label.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         Q2Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q2Label.setText("Q2. what is the result of 1+2?");
-        getContentPane().add(Q2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
+        Q2Label.setText("<html>Q2. Decrypt the message <br>\"PHHW BRX LQ WKH SDUN\"<br> using the Caesar cipher? </html>");
+        getContentPane().add(Q2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 260, -1));
 
         buttonGroup1.add(a4);
-        a4.setText("jRadioButton1");
+        a4.setText("WELL DONE FOR TRYING");
         getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
         buttonGroup1.add(a3);
-        a3.setText("jRadioButton1");
+        a3.setText("THANK YOU VERY MUCH");
         getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
         buttonGroup1.add(a1);
-        a1.setText("jRadioButton1");
+        a1.setText("MEET YOU IN THE PARK ");
         getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
         buttonGroup1.add(a2);
-        a2.setText("jRadioButton1");
+        a2.setText("HELLO HOW ARE YOU ");
         getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
         q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N

@@ -84,25 +84,30 @@ public class Q3Level2 extends javax.swing.JFrame {
         Level2Label.setText("Level 2");
         getContentPane().add(Level2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 60, -1));
 
-        Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         Q3Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q3Label.setText("Q3. what is the result of 1+2?");
-        getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
+        Q3Label.setText("<html>  Q3.This type of method <br>cannot access any non-static <br>member variables in its own class.");
+        getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 220, 70));
 
         buttonGroup1.add(a4);
-        a4.setText("jRadioButton1");
+        a4.setText("non-static");
         getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
         buttonGroup1.add(a3);
-        a3.setText("jRadioButton1");
+        a3.setText("static");
         getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
         buttonGroup1.add(a1);
-        a1.setText("jRadioButton1");
+        a1.setText(" instance");
         getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
         buttonGroup1.add(a2);
-        a2.setText("jRadioButton1");
+        a2.setText("void");
+        a2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                a2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
         q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
@@ -139,6 +144,10 @@ public class Q3Level2 extends javax.swing.JFrame {
         this.dispose();
         new Welcome().setVisible(true);
     }//GEN-LAST:event_HomeLabelMouseClicked
+
+    private void a2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_a2ActionPerformed
 
     /**
      * @param args the command line arguments

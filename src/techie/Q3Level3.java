@@ -33,13 +33,13 @@ public class Q3Level3 extends javax.swing.JFrame {
         NextButton = new javax.swing.JButton();
         Level3Label = new javax.swing.JLabel();
         Q3Label = new javax.swing.JLabel();
-        a4 = new javax.swing.JRadioButton();
-        a3 = new javax.swing.JRadioButton();
-        a1 = new javax.swing.JRadioButton();
-        a2 = new javax.swing.JRadioButton();
         q2 = new javax.swing.JLabel();
         q1 = new javax.swing.JLabel();
         q3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        code = new javax.swing.JTextArea();
+        enterLabel = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -87,23 +87,7 @@ public class Q3Level3 extends javax.swing.JFrame {
         Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q3Label.setForeground(new java.awt.Color(39, 40, 59));
         Q3Label.setText("Q3. what is the result of 1+2?");
-        getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
-
-        buttonGroup1.add(a4);
-        a4.setText("jRadioButton1");
-        getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
-
-        buttonGroup1.add(a3);
-        a3.setText("jRadioButton1");
-        getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
-
-        buttonGroup1.add(a1);
-        a1.setText("jRadioButton1");
-        getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
-
-        buttonGroup1.add(a2);
-        a2.setText("jRadioButton1");
-        getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+        getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 240, -1));
 
         q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q2.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,6 +103,33 @@ public class Q3Level3 extends javax.swing.JFrame {
         q3.setForeground(new java.awt.Color(255, 255, 255));
         q3.setText("02");
         getContentPane().add(q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
+
+        code.setBackground(new java.awt.Color(255, 254, 250));
+        code.setColumns(20);
+        code.setRows(5);
+        code.setText("public class TrickyOutput {\n    public static void main(String[] args) {\n        int x = 3;\n        int y = 10;\n        int z = x++ * y++ + --x * x++ - y-- + x - y;\n        System.out.println(z);\n    }\n}");
+        code.setToolTipText("");
+        code.setBorder(null);
+        code.setCaretColor(new java.awt.Color(255, 255, 255));
+        code.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        code.setDisabledTextColor(new java.awt.Color(255, 204, 204));
+        jScrollPane1.setViewportView(code);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 250, 150));
+
+        enterLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        enterLabel.setText("Enter Your Answer:");
+        getContentPane().add(enterLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 140, 30));
+
+        jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setSelectionColor(new java.awt.Color(255, 255, 255));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 90, 30));
 
         backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q3.png"))); // NOI18N
         getContentPane().add(backGroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
@@ -139,6 +150,10 @@ public class Q3Level3 extends javax.swing.JFrame {
         this.dispose();
         new Welcome().setVisible(true);
     }//GEN-LAST:event_HomeLabelMouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,12 +230,12 @@ public class Q3Level3 extends javax.swing.JFrame {
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
     private javax.swing.JLabel Q3Label;
-    private javax.swing.JRadioButton a1;
-    private javax.swing.JRadioButton a2;
-    private javax.swing.JRadioButton a3;
-    private javax.swing.JRadioButton a4;
     private javax.swing.JLabel backGroundLabel;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextArea code;
+    private javax.swing.JLabel enterLabel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel q1;
     private javax.swing.JLabel q2;
     private javax.swing.JLabel q3;

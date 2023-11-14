@@ -10,7 +10,10 @@ public class Q2Level3 extends javax.swing.JFrame {
     public Q2Level3() {
         initComponents();
         PointsTextField.setEditable(false);
-       
+      code.setEditable(false);
+      
+    
+     jScrollPane1.setBorder(null);
       
     }
 
@@ -30,12 +33,12 @@ public class Q2Level3 extends javax.swing.JFrame {
         NextButton = new javax.swing.JButton();
         Level3Label = new javax.swing.JLabel();
         Q2Label = new javax.swing.JLabel();
-        a4 = new javax.swing.JRadioButton();
-        a3 = new javax.swing.JRadioButton();
-        a1 = new javax.swing.JRadioButton();
-        a2 = new javax.swing.JRadioButton();
         q1 = new javax.swing.JLabel();
         q3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        code = new javax.swing.JTextArea();
+        enterLabel = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         backgroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,24 +85,8 @@ public class Q2Level3 extends javax.swing.JFrame {
 
         Q2Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q2Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q2Label.setText("Q2. what is the result of 1+2?");
-        getContentPane().add(Q2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 220, -1));
-
-        buttonGroup1.add(a4);
-        a4.setText("jRadioButton1");
-        getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
-
-        buttonGroup1.add(a3);
-        a3.setText("jRadioButton1");
-        getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
-
-        buttonGroup1.add(a1);
-        a1.setText("jRadioButton1");
-        getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
-
-        buttonGroup1.add(a2);
-        a2.setText("jRadioButton1");
-        getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+        Q2Label.setText("Q2.What is The Output?");
+        getContentPane().add(Q2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 220, -1));
 
         q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         q1.setForeground(new java.awt.Color(255, 255, 255));
@@ -111,7 +98,35 @@ public class Q2Level3 extends javax.swing.JFrame {
         q3.setText("02");
         getContentPane().add(q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
 
+        code.setBackground(new java.awt.Color(255, 254, 250));
+        code.setColumns(20);
+        code.setRows(5);
+        code.setText("class Test {\n    protected int x, y;\n}\n \nclass Main {\n    public static void main(String args[]) {\n        Test t = new Test();\n        System.out.println(t.x + \" \" + t.y);\n    }\n}");
+        code.setToolTipText("");
+        code.setBorder(null);
+        code.setCaretColor(new java.awt.Color(255, 255, 255));
+        code.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        code.setDisabledTextColor(new java.awt.Color(255, 204, 204));
+        jScrollPane1.setViewportView(code);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 230, 170));
+
+        enterLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        enterLabel.setText("Enter Your Answer:");
+        getContentPane().add(enterLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 140, 30));
+
+        jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setSelectionColor(new java.awt.Color(255, 255, 255));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 90, 30));
+
         backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q2.png"))); // NOI18N
+        backgroundLabel.setText(" What is The Output?");
         getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         setBounds(0, 0, 330, 600);
@@ -130,6 +145,10 @@ public class Q2Level3 extends javax.swing.JFrame {
         this.dispose();
         new Welcome().setVisible(true);
     }//GEN-LAST:event_HomeLabelMouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,12 +172,12 @@ public class Q2Level3 extends javax.swing.JFrame {
     private javax.swing.JLabel PointsImageLabel;
     private javax.swing.JTextField PointsTextField;
     private javax.swing.JLabel Q2Label;
-    private javax.swing.JRadioButton a1;
-    private javax.swing.JRadioButton a2;
-    private javax.swing.JRadioButton a3;
-    private javax.swing.JRadioButton a4;
     private javax.swing.JLabel backgroundLabel;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextArea code;
+    private javax.swing.JLabel enterLabel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel q1;
     private javax.swing.JLabel q3;
     // End of variables declaration//GEN-END:variables
