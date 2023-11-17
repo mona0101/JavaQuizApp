@@ -4,19 +4,31 @@
  */
 package techie;
 
+import java.io.*;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author ragha
  */
 public class SignUp extends javax.swing.JFrame {
+ private UserInfo u = new UserInfo();
+ private showMessageDialog Message;
+ private DataOutputStream outputDataStream;
 
-    /**
-     * Creates new form SignUp
-     */
-    public SignUp() {
+private Boolean value=false;
+
+    public SignUp() throws FileNotFoundException, IOException {
         initComponents();
         setTitle("Techie");
         setLocationRelativeTo(null);
+
+
     }
 
     /**
@@ -83,6 +95,16 @@ public class SignUp extends javax.swing.JFrame {
         nameTextField.setForeground(new java.awt.Color(153, 153, 153));
         nameTextField.setText("enter your name here");
         nameTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(39, 40, 59)));
+        nameTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nameTextFieldMouseClicked(evt);
+            }
+        });
+        nameTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameTextFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(nameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 213, 31));
 
         EmailLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
@@ -95,9 +117,9 @@ public class SignUp extends javax.swing.JFrame {
         EmailTextField.setForeground(new java.awt.Color(153, 153, 153));
         EmailTextField.setText("enter your email here");
         EmailTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(39, 40, 59)));
-        EmailTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmailTextFieldActionPerformed(evt);
+        EmailTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EmailTextFieldMouseClicked(evt);
             }
         });
         getContentPane().add(EmailTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 213, 31));
@@ -112,9 +134,9 @@ public class SignUp extends javax.swing.JFrame {
         UsernameTextField.setForeground(new java.awt.Color(153, 153, 153));
         UsernameTextField.setText("enter your username here");
         UsernameTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(39, 40, 59)));
-        UsernameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsernameTextFieldActionPerformed(evt);
+        UsernameTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UsernameTextFieldMouseClicked(evt);
             }
         });
         getContentPane().add(UsernameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 213, 31));
@@ -129,9 +151,9 @@ public class SignUp extends javax.swing.JFrame {
         PasswordTextField.setForeground(new java.awt.Color(153, 153, 153));
         PasswordTextField.setText("enter your password here");
         PasswordTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(39, 40, 59)));
-        PasswordTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PasswordTextFieldActionPerformed(evt);
+        PasswordTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PasswordTextFieldMouseClicked(evt);
             }
         });
         getContentPane().add(PasswordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 213, 31));
@@ -143,7 +165,99 @@ public class SignUp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInButtonActionPerformed
-        // TODO add your handling code here:
+   
+ 
+        String username = UsernameTextField.getText();
+        String name = nameTextField.getText();
+        String email = EmailTextField.getText();
+        String password = PasswordTextField.getText();
+        
+      
+        
+        
+       if(value==false){//if there is exception
+               
+        try {
+            
+           if (username != null && !username.isEmpty() &&
+            name != null && !name.isEmpty() &&
+            email != null && !email.isEmpty() &&
+            password != null && !password.isEmpty()){//to check if it is empty or not
+               
+            u.setUserName(username);
+            u.setName(name);
+            u.setEmail(email);
+            u.setPassword(password);
+            
+            value = true;
+            
+        }//end of if
+           else if (username == null || username.isEmpty() ||name == null || name.isEmpty()
+                   || email == null || email.isEmpty() || password == null || password.isEmpty()) {
+               
+             Message=new showMessageDialog("You can't leave any null values! ");
+             Message.setVisible(true);
+           }//end of else
+            
+             
+        }  catch (emailException e) {
+
+         Message=new showMessageDialog(e.getMessage());
+               Message.setVisible(true);
+        } catch (passwordException e) {
+            
+          Message=new showMessageDialog(e.getMessage());
+               Message.setVisible(true);
+               
+        } catch (userNameException e) {
+            
+           Message=new showMessageDialog(e.getMessage());
+           Message.setVisible(true);
+        }//end of catch
+  
+    }//end of if       
+     
+       
+   
+     try {
+         outputDataStream = new DataOutputStream(new FileOutputStream("usersAccounts.dat", true));
+     } catch (FileNotFoundException ex) {
+         Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+     }
+   
+if(value==true){//if there is no exception write in file
+     try {
+         outputDataStream.writeUTF(u.toString());
+     } catch (IOException ex) {
+         Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+     }
+}//end of if
+
+     try {
+         outputDataStream.close();
+     } catch (IOException ex) {
+         Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+     }
+     
+       
+       if(value==true){//if there is no exception go to levels frame
+           
+           
+     try {       
+         
+        
+         new levels().setVisible(true);
+         
+         
+     } catch (IOException ex) {
+         Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+     }//end of catch
+     
+     setVisible(false);//to hide sign up frame
+       }//end of if
+    
+       
+       
     }//GEN-LAST:event_LogInButtonActionPerformed
 
     private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
@@ -152,17 +266,29 @@ public class SignUp extends javax.swing.JFrame {
         new Welcome().setVisible(true);
     }//GEN-LAST:event_BackMouseClicked
 
-    private void UsernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameTextFieldActionPerformed
+    private void nameTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nameTextFieldMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_UsernameTextFieldActionPerformed
+        nameTextField.setText(null); 
+    }//GEN-LAST:event_nameTextFieldMouseClicked
 
-    private void PasswordTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordTextFieldActionPerformed
+    private void EmailTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EmailTextFieldMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordTextFieldActionPerformed
+        EmailTextField.setText(null);
+    }//GEN-LAST:event_EmailTextFieldMouseClicked
 
-    private void EmailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTextFieldActionPerformed
+    private void UsernameTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsernameTextFieldMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_EmailTextFieldActionPerformed
+        UsernameTextField.setText(null);
+    }//GEN-LAST:event_UsernameTextFieldMouseClicked
+
+    private void PasswordTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PasswordTextFieldMouseClicked
+        // TODO add your handling code here:
+        PasswordTextField.setText(null);
+    }//GEN-LAST:event_PasswordTextFieldMouseClicked
+
+    private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
+   
+    }//GEN-LAST:event_nameTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,7 +320,11 @@ public class SignUp extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SignUp().setVisible(true);
+                try {
+                    new SignUp().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

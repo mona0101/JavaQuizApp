@@ -1,17 +1,20 @@
 
 package techie;
 
+import java.io.IOException;        
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Q2Level3 extends javax.swing.JFrame {
     
-    
-   
-  
+    showMessageDialog op
+            = new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
     
     public Q2Level3() {
         initComponents();
         PointsTextField.setEditable(false);
       code.setEditable(false);
-      
+       PointsTextField.setText("" + LogIn.pointCount);
     
      jScrollPane1.setBorder(null);
       
@@ -38,10 +41,13 @@ public class Q2Level3 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         code = new javax.swing.JTextArea();
         enterLabel = new javax.swing.JLabel();
+        ok = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         backgroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Techie");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HomeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home.png"))); // NOI18N
@@ -55,17 +61,12 @@ public class Q2Level3 extends javax.swing.JFrame {
         PointsImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/star2.png"))); // NOI18N
         getContentPane().add(PointsImageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 20, -1));
 
-        PointsTextField.setBackground(new java.awt.Color(255, 254, 250));
+        PointsTextField.setBackground(new java.awt.Color(234, 220, 222));
         PointsTextField.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         PointsTextField.setForeground(new java.awt.Color(39, 40, 59));
         PointsTextField.setText("00");
         PointsTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        PointsTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PointsTextFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 20, 20));
+        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 30, 20));
 
         NextButton.setBackground(new java.awt.Color(39, 40, 59));
         NextButton.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -76,7 +77,7 @@ public class Q2Level3 extends javax.swing.JFrame {
                 NextButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(NextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 154, 30));
+        getContentPane().add(NextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 154, 30));
 
         Level3Label.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         Level3Label.setForeground(new java.awt.Color(39, 40, 59));
@@ -115,15 +116,27 @@ public class Q2Level3 extends javax.swing.JFrame {
         enterLabel.setText("Enter Your Answer:");
         getContentPane().add(enterLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 140, 30));
 
+        ok.setBackground(new java.awt.Color(39, 40, 59));
+        ok.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        ok.setForeground(new java.awt.Color(255, 255, 255));
+        ok.setText("ok");
+        ok.setActionCommand("");
+        ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ok, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 60, 20));
+
         jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextField1.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 90, 30));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 90, 30));
 
         backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level3q2.png"))); // NOI18N
         backgroundLabel.setText(" What is The Output?");
@@ -133,23 +146,59 @@ public class Q2Level3 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NextButtonActionPerformed
-
-    private void PointsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointsTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PointsTextFieldActionPerformed
-
     private void HomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLabelMouseClicked
         // TODO add your handling code here:
         this.dispose();
-        new Welcome().setVisible(true);
+        try {
+            new levels().setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(Q2Level3.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_HomeLabelMouseClicked
+
+    private void okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okActionPerformed
+        // TODO add your handling code here:
+
+        jTextField1.setEnabled(false);
+        ok.setEnabled(false);
+        String input = jTextField1.getText().trim();
+        if (input.equals("0 0")) {
+
+            op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
+            op.setVisible(true);
+            LogIn.pointCount = +100;
+            PointsTextField.setText("" + LogIn.pointCount);
+            // LogIn.users[LogIn.row][4]= ""+LogIn.pointCount;
+
+        } else {
+
+            op.setVisible(true);
+        }
+    }//GEN-LAST:event_okActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+        jTextField1.setEnabled(false);
+        ok.setEnabled(false);
+        String input = jTextField1.getText().trim();
+        if (input.equals("0 0")) {
+
+            op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
+            op.setVisible(true);
+             LogIn.pointCount +=100;
+            PointsTextField.setText("" + LogIn.pointCount);
+            //LogIn.users[LogIn.row][4]= ""+LogIn.pointCou
+
+        } else {
+
+            op.setVisible(true);
+        }
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+        // TODO add your handling code here:
+        new Q3Level3().setVisible(true);
+    }//GEN-LAST:event_NextButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,6 +228,7 @@ public class Q2Level3 extends javax.swing.JFrame {
     private javax.swing.JLabel enterLabel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton ok;
     private javax.swing.JLabel q1;
     private javax.swing.JLabel q3;
     // End of variables declaration//GEN-END:variables

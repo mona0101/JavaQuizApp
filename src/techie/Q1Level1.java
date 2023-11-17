@@ -1,14 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package techie;
-import java.awt.*;
-import java.awt.event.*;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 public class Q1Level1 extends javax.swing.JFrame {
-    
+     showMessageDialog op = 
+           new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
     
    private ButtonGroup group=new ButtonGroup();
   
@@ -19,6 +18,7 @@ public class Q1Level1 extends javax.swing.JFrame {
         setTitle("Techie");
         setLocationRelativeTo(null);
         PointsTextField.setEditable(false);
+        PointsTextField.setText(""+ LogIn.pointCount);
         
        //add radio buttons to group
         
@@ -51,6 +51,8 @@ public class Q1Level1 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Techie");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HomeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home.png"))); // NOI18N
@@ -69,12 +71,7 @@ public class Q1Level1 extends javax.swing.JFrame {
         PointsTextField.setForeground(new java.awt.Color(39, 40, 59));
         PointsTextField.setText("00");
         PointsTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        PointsTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PointsTextFieldActionPerformed(evt);
-            }
-        });
-        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 20, 20));
+        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 30, 20));
 
         NextButton.setBackground(new java.awt.Color(39, 40, 59));
         NextButton.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -87,6 +84,7 @@ public class Q1Level1 extends javax.swing.JFrame {
         });
         getContentPane().add(NextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 154, 30));
 
+        Choice4RadioButton.setBackground(new java.awt.Color(255, 254, 250));
         Choice4RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice4RadioButton.setForeground(new java.awt.Color(39, 40, 59));
         Choice4RadioButton.setText("Fn = Fn+1 - Fn+2");
@@ -95,39 +93,41 @@ public class Q1Level1 extends javax.swing.JFrame {
                 Choice4RadioButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(Choice4RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
+        getContentPane().add(Choice4RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
 
+        Choice3RadioButton.setBackground(new java.awt.Color(255, 254, 250));
         Choice3RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice3RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice3RadioButton.setText("Fn= Fn+1+ Fn+2");
-        Choice3RadioButton.setActionCommand("Fn = Fn+1 + Fn+2");
+        Choice3RadioButton.setText("Fn = Fn+1 + Fn+2");
         Choice3RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice3RadioButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(Choice3RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
+        getContentPane().add(Choice3RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
 
+        Choice2RadioButton.setBackground(new java.awt.Color(255, 254, 250));
         Choice2RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice2RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice2RadioButton.setText("Fn=Fn-1- Fn-2 ");
+        Choice2RadioButton.setText("Fn = Fn-1 - Fn-2 ");
         Choice2RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice2RadioButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(Choice2RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        getContentPane().add(Choice2RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
+        Choice1RadioButton.setBackground(new java.awt.Color(255, 254, 250));
         Choice1RadioButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         Choice1RadioButton.setForeground(new java.awt.Color(39, 40, 59));
-        Choice1RadioButton.setText("Fn = Fn-1+Fn-2 ");
+        Choice1RadioButton.setText("Fn = Fn-1 + Fn-2 ");
         Choice1RadioButton.setActionCommand("Fn = Fn-1+ Fn-2 ");
         Choice1RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Choice1RadioButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(Choice1RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        getContentPane().add(Choice1RadioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         Num1Label.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Num1Label.setForeground(new java.awt.Color(255, 255, 255));
@@ -152,32 +152,64 @@ public class Q1Level1 extends javax.swing.JFrame {
 
     private void Choice1RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Choice1RadioButtonActionPerformed
         // TODO add your handling code here:
+        
+       Choice1RadioButton.setEnabled(false);
+      Choice2RadioButton.setEnabled(false);
+      Choice3RadioButton.setEnabled(false);
+      Choice4RadioButton.setEnabled(false);
+   
+         
+        op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
+        op.setVisible(true);
+                
+         LogIn.pointCount +=100;
+      //LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+        PointsTextField.setText("" + LogIn.pointCount);
     }//GEN-LAST:event_Choice1RadioButtonActionPerformed
 
     private void Choice2RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Choice2RadioButtonActionPerformed
         // TODO add your handling code here:
+      Choice1RadioButton.setEnabled(false);
+      Choice2RadioButton.setEnabled(false);
+      Choice3RadioButton.setEnabled(false);
+      Choice4RadioButton.setEnabled(false);
+      
+       op.setVisible(true);
     }//GEN-LAST:event_Choice2RadioButtonActionPerformed
 
     private void Choice4RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Choice4RadioButtonActionPerformed
         // TODO add your handling code here:
+      Choice1RadioButton.setEnabled(false);
+      Choice2RadioButton.setEnabled(false);
+      Choice3RadioButton.setEnabled(false);
+      Choice4RadioButton.setEnabled(false);
+      
+       op.setVisible(true);
     }//GEN-LAST:event_Choice4RadioButtonActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
+        new Q2Level1().setVisible(true);
     }//GEN-LAST:event_NextButtonActionPerformed
-
-    private void PointsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointsTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PointsTextFieldActionPerformed
 
     private void HomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLabelMouseClicked
         // TODO add your handling code here:
         this.dispose();
-        new Welcome().setVisible(true);
+         try {
+             new levels().setVisible(true);
+         } catch (IOException ex) {
+             Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+         }
     }//GEN-LAST:event_HomeLabelMouseClicked
 
     private void Choice3RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Choice3RadioButtonActionPerformed
         // TODO add your handling code here:
+      Choice1RadioButton.setEnabled(false);
+      Choice2RadioButton.setEnabled(false);
+      Choice3RadioButton.setEnabled(false);
+      Choice4RadioButton.setEnabled(false);
+      
+       op.setVisible(true);
     }//GEN-LAST:event_Choice3RadioButtonActionPerformed
 
     /**

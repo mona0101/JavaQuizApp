@@ -2,18 +2,13 @@
 package techie;
 
 public class Q3Level2 extends javax.swing.JFrame {
-    
-    
-   
-  
+    showMessageDialog op = 
+           new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
     
     public Q3Level2() {
         initComponents();
         PointsTextField.setEditable(false);
-       
-        
-       //add radio buttons to group
-        
+       PointsTextField.setText(""+LogIn.pointCount);
     
     }
 
@@ -43,6 +38,8 @@ public class Q3Level2 extends javax.swing.JFrame {
         backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Techie");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HomeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home.png"))); // NOI18N
@@ -56,6 +53,7 @@ public class Q3Level2 extends javax.swing.JFrame {
         PointsImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/star2.png"))); // NOI18N
         getContentPane().add(PointsImageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 20, -1));
 
+        PointsTextField.setEditable(false);
         PointsTextField.setBackground(new java.awt.Color(255, 254, 250));
         PointsTextField.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         PointsTextField.setForeground(new java.awt.Color(39, 40, 59));
@@ -66,7 +64,7 @@ public class Q3Level2 extends javax.swing.JFrame {
                 PointsTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 20, 20));
+        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 40, 20));
 
         NextButton.setBackground(new java.awt.Color(39, 40, 59));
         NextButton.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -89,18 +87,37 @@ public class Q3Level2 extends javax.swing.JFrame {
         Q3Label.setText("<html>  Q3.This type of method <br>cannot access any non-static <br>member variables in its own class.");
         getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 220, 70));
 
+        a4.setBackground(new java.awt.Color(255, 254, 250));
         buttonGroup1.add(a4);
         a4.setText("non-static");
+        a4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                a4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(a4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
+        a3.setBackground(new java.awt.Color(255, 254, 250));
         buttonGroup1.add(a3);
         a3.setText("static");
+        a3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                a3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
+        a1.setBackground(new java.awt.Color(255, 254, 250));
         buttonGroup1.add(a1);
         a1.setText(" instance");
+        a1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                a1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
+        a2.setBackground(new java.awt.Color(255, 254, 250));
         buttonGroup1.add(a2);
         a2.setText("void");
         a2.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +142,7 @@ public class Q3Level2 extends javax.swing.JFrame {
         q3.setText("02");
         getContentPane().add(q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 40, 60));
 
-        backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/q3level2.png"))); // NOI18N
+        backGroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/level2Q1.png"))); // NOI18N
         getContentPane().add(backGroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 600));
 
         setSize(new java.awt.Dimension(330, 600));
@@ -134,6 +151,7 @@ public class Q3Level2 extends javax.swing.JFrame {
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
+         new Q1Level3().setVisible(true);
     }//GEN-LAST:event_NextButtonActionPerformed
 
     private void PointsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointsTextFieldActionPerformed
@@ -147,44 +165,51 @@ public class Q3Level2 extends javax.swing.JFrame {
     }//GEN-LAST:event_HomeLabelMouseClicked
 
     private void a2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a2ActionPerformed
-        // TODO add your handling code here:
+       a3.setEnabled(false);
+ a4.setEnabled(false);
+ a1.setEnabled(false);
+ a2.setEnabled(false);
+        op.setVisible(true);
     }//GEN-LAST:event_a2ActionPerformed
+
+    private void a1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a1ActionPerformed
+        // TODO add your handling code here:
+         a3.setEnabled(false);
+ a4.setEnabled(false);
+ a1.setEnabled(false);
+ a2.setEnabled(false);
+        op.setVisible(true);
+    }//GEN-LAST:event_a1ActionPerformed
+
+    private void a3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a3ActionPerformed
+        // TODO add your handling code here:
+         a3.setEnabled(false);
+ a4.setEnabled(false);
+ a1.setEnabled(false);
+ a2.setEnabled(false);
+        op.setVisible(true);
+    }//GEN-LAST:event_a3ActionPerformed
+
+    private void a4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a4ActionPerformed
+        
+        a3.setEnabled(false);
+ a4.setEnabled(false);
+ a1.setEnabled(false);
+ a2.setEnabled(false);
+ a3.setEnabled(false); a4.setEnabled(false);a1.setEnabled(false);a2.setEnabled(false);
+      op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
+        op.setVisible(true);
+         LogIn.pointCount +=100;
+        PointsTextField.setText("" + LogIn.pointCount);
+        op.setVisible(true);
+        
+    }//GEN-LAST:event_a4ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Q3Level2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Q3Level2().setVisible(true);

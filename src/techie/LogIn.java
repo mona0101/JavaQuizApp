@@ -1,24 +1,79 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package techie;
+import java.io.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.logging.*;
+
 
 /**
  *
  * @author ragha
  */
 public class LogIn extends javax.swing.JFrame {
-
+    public  static String name ="";
+    public  static int  pointCount= 0;
+    public  static int  row = -1;
+    public  static String users[][] = new String[20][5];
+ 
     /**
      * Creates new form SignIn
      */
-    public LogIn() {
+    public LogIn() throws FileNotFoundException, IOException {
         initComponents();
          
         setTitle("Techie");
         setLocationRelativeTo(null);
         
+       
+        DataInputStream dataInputStream
+                = new DataInputStream(new FileInputStream("usersAccounts.dat"));
+        boolean endOfFile = false;
+       
+        while (!endOfFile) {
+            try {
+
+                for (int row = 0; row < 20; row++) {
+
+                    users[row] = dataInputStream.readUTF().split(",");
+                    
+                   
+                }
+
+            } catch (EOFException e) {
+                endOfFile = true;
+            }
+
+        }
+
+        dataInputStream.close();
+
+        
+
+        for (int i = 0; i < users.length; i++) {
+            for (int j = 0; j < users[i].length; j++) {
+                if ("CodeMaster".equals(users[i][j])) {
+                    row = i;// من هنا اقدر اعرف معلومات المستخدم في ايت صف
+
+                    break;
+                }
+            }
+        }
+
+        
+        
+        if (row != -1) {
+              
+            name = users[row][1].trim();
+            pointCount= Integer.parseInt(users[row][4].trim());
+            users[row][4]= ""+pointCount;
+           
+        } else {
+            System.out.println("not found ");
+        }
+            
+   
+       
     }
 
     /**
@@ -110,7 +165,7 @@ public class LogIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void UsernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameTextFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_UsernameTextFieldActionPerformed
 
     private void PasswordTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordTextFieldActionPerformed
@@ -119,11 +174,18 @@ public class LogIn extends javax.swing.JFrame {
 
     private void LogInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInButtonActionPerformed
         // TODO add your handling code here:
+        try {
+           
+            new levels().setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_LogInButtonActionPerformed
 
     private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
         // TODO add your handling code here:
-        this.dispose();
+               
+
         new Welcome().setVisible(true);
     }//GEN-LAST:event_BackMouseClicked
 
@@ -152,13 +214,17 @@ public class LogIn extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
+
+       
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LogIn().setVisible(true);
+                try {
+                    new LogIn().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(LogIn.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -174,4 +240,8 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JTextField UsernameTextField;
     private javax.swing.JLabel signInLabel;
     // End of variables declaration//GEN-END:variables
+
+    void setVisiable(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
