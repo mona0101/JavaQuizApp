@@ -187,6 +187,9 @@
               <Color blue="fa" green="fe" red="ff" type="rgb"/>
             </Property>
             <Property name="columns" type="int" value="20"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3b" green="28" red="27" type="rgb"/>
+            </Property>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="class Test {&#xa;    protected int x, y;&#xa;}&#xa; &#xa;class Main {&#xa;    public static void main(String args[]) {&#xa;        Test t = new Test();&#xa;        System.out.println(t.x + &quot; &quot; + t.y);&#xa;    }&#xa;}"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -210,6 +213,9 @@
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comic Sans MS" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3b" green="28" red="27" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Enter Your Answer:"/>
       </Properties>

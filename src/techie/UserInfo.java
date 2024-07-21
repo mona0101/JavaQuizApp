@@ -1,15 +1,25 @@
 
 package techie;
+
+import static techie.LogIn.row;
+import static techie.LogIn.users;
+
 public class UserInfo  {
     
     private String userName ;
     private String name ;
     private String password;
     private String email;
+    private String checkpassword;
     private int points ;
-    public UserInfo(){}
-
     
+    
+    
+    
+    public UserInfo(){
+    
+    }
+
    
     public void setName(String name) {
       
@@ -18,20 +28,33 @@ public class UserInfo  {
     }
 
     public void setPassword(String password) throws passwordException {
-        if(!password.matches("(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{6,}$")){
+        if(!password.matches("(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!_%*#?&])[A-Za-z\\d@$!%*#?&]{6,}$")){
              throw new passwordException(password);
         }
          
         this.password = password;
     }
+    
+    
+    public void setPassword(String checkpassword,String arrayPassword) throws passwordException{
+    if(!checkpassword.equals(arrayPassword)){//if password is not correct
+         throw new passwordException();
+        }
+    this.checkpassword=checkpassword;
+    
+    }
+    
+    
+    
 
     public void setEmail(String email) throws emailException {
         if(!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")){
-        throw new emailException(email);
+        throw new emailException();
         }
         this.email = email;
         
     }
+   
 
     public void setPoints(int points) {
         this.points = points;
@@ -61,8 +84,7 @@ public class UserInfo  {
 
     public void setUserName(String userName) throws userNameException  {
          if(userName.contains(" ")){
-         throw new userNameException(userName);
-         
+         throw new userNameException();
          }
         this.userName = userName;
     }
@@ -71,40 +93,8 @@ public class UserInfo  {
     public String toString() {
         return  userName +"," + name +"," + password + "," + email + "," + points+"\n" ;
     }
-   
-}    
-class userNameException extends Exception{
-
-        public userNameException() {
-              super("Error: Username should not have any spaces.\n");
-        }
-
-        public userNameException(String message) {
-            super("Error: in "+message+" ,Username should not have any spaces.\n");
-        }
-}
-class passwordException extends Exception{
-
-        public passwordException() {
-              super("Error: Passwords must have upper and lower case letters\n at least 1 number and special character\n and be at least 6 characters long.\n");
-        }
-
-        public passwordException(String message) {
-            super("Error: in "+message+", Passwords must have upper and lower case letters\n at least 1 number and special character\n and be at least 6 characters long.\n");
-        }
-
-
     
-}
-class emailException extends Exception{
-
-        public emailException() {
-              super("Error:incorrect email format.");
-        }
-
-        public emailException(String message) {
-            super("Error: in "+message+", incorrect email format.");
-        }
+}//end of class
+   
 
 
-}  

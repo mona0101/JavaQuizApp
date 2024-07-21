@@ -6,6 +6,7 @@ package techie;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,7 +14,8 @@ import javax.swing.*;
 
 public class Q2Level1 extends javax.swing.JFrame {
 showMessageDialog op = 
-           new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
+           new showMessageDialog("Wrong answer, you have scored zero points\nKeep going – success is on the way!\n"+
+                   "Correct answer: byte code");
      private ButtonGroup group=new ButtonGroup();
     
  
@@ -193,7 +195,17 @@ showMessageDialog op =
         op.setVisible(true);
                 
          LogIn.pointCount +=100;
-      //LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+    
+    
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+     
         PointsTextField.setText("" + LogIn.pointCount);
     }//GEN-LAST:event_Choice2RadioButtonActionPerformed
 
@@ -209,6 +221,7 @@ showMessageDialog op =
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         new  Q3Level1().setVisible(true);
     }//GEN-LAST:event_NextButtonActionPerformed
 

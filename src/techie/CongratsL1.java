@@ -37,6 +37,7 @@ public class CongratsL1 extends javax.swing.JFrame {
         BackgroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HomeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home.png"))); // NOI18N
@@ -70,6 +71,11 @@ public class CongratsL1 extends javax.swing.JFrame {
         PointsTextField.setForeground(new java.awt.Color(39, 40, 59));
         PointsTextField.setText("300");
         PointsTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        PointsTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PointsTextFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 60, 70));
 
         PointsLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 27)); // NOI18N
@@ -112,6 +118,10 @@ public class CongratsL1 extends javax.swing.JFrame {
             Logger.getLogger(CongratsL1.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_HomeLabelMouseClicked
+
+    private void PointsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointsTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PointsTextFieldActionPerformed
 
     
     public static void main(String args[]) {

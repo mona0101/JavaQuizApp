@@ -12,23 +12,20 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author ragha
- */
-public class SignUp extends javax.swing.JFrame {
- private UserInfo u = new UserInfo();
- private showMessageDialog Message;
- private DataOutputStream outputDataStream;
 
-private Boolean value=false;
+
+public class SignUp extends javax.swing.JFrame {
+ 
+    private UserInfo u = new UserInfo();
+    private showMessageDialog Message;
+    private FileWriter outputFile ;
+
+    private Boolean value = false;
 
     public SignUp() throws FileNotFoundException, IOException {
         initComponents();
         setTitle("Techie");
         setLocationRelativeTo(null);
-
-
     }
 
     /**
@@ -159,7 +156,7 @@ private Boolean value=false;
         getContentPane().add(PasswordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 213, 31));
 
         BackgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Solidbackgrond.png"))); // NOI18N
-        getContentPane().add(BackgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 320, 620));
+        getContentPane().add(BackgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 310, 620));
 
         setBounds(0, 0, 330, 600);
     }// </editor-fold>//GEN-END:initComponents
@@ -171,31 +168,27 @@ private Boolean value=false;
         String name = nameTextField.getText();
         String email = EmailTextField.getText();
         String password = PasswordTextField.getText();
-        
       
-        
         
        if(value==false){//if there is exception
                
         try {
             
-           if (username != null && !username.isEmpty() &&
-            name != null && !name.isEmpty() &&
-            email != null && !email.isEmpty() &&
-            password != null && !password.isEmpty()){//to check if it is empty or not
+           if ( !username.isEmpty() && !name.isEmpty() &&
+             !email.isEmpty() && !password.isEmpty()){//to check if it is empty or not
                
             u.setUserName(username);
             u.setName(name);
             u.setEmail(email);
             u.setPassword(password);
             
-            value = true;
+            value = true;//means there is no exception
             
         }//end of if
-           else if (username == null || username.isEmpty() ||name == null || name.isEmpty()
-                   || email == null || email.isEmpty() || password == null || password.isEmpty()) {
+           else if ( username.isEmpty() || name.isEmpty()
+                   || email.isEmpty() || password.isEmpty()) {
                
-             Message=new showMessageDialog("You can't leave any null values! ");
+             Message=new showMessageDialog("You can't leave any null values!");
              Message.setVisible(true);
            }//end of else
             
@@ -218,35 +211,33 @@ private Boolean value=false;
     }//end of if       
      
        
+     try {
+            outputFile = new FileWriter("Accounts.txt",true);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+        }
    
-     try {
-         outputDataStream = new DataOutputStream(new FileOutputStream("usersAccounts.dat", true));
-     } catch (FileNotFoundException ex) {
-         Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
-     }
-   
-if(value==true){//if there is no exception write in file
-     try {
-         outputDataStream.writeUTF(u.toString());
-     } catch (IOException ex) {
-         Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
-     }
-}//end of if
-
-     try {
-         outputDataStream.close();
-     } catch (IOException ex) {
-         Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
-     }
+if (value == true) { try {
+            //if there is no exception write in file
+            outputFile.write(u.toString());
+            } catch (IOException ex) {
+                Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }//end of if
+        try {
+            outputFile.close();
+        } catch (IOException ex) {
+            Logger.getLogger(SignUp.class.getName()).log(Level.SEVERE, null, ex);
+        }
      
        
-       if(value==true){//if there is no exception go to levels frame
+       if(value==true){//if there is no exception go to LogIn frame
            
-           
-     try {       
+     try {
          
-        
-         new levels().setVisible(true);
+         new LogIn().setVisible(true);
          
          
      } catch (IOException ex) {
@@ -341,7 +332,7 @@ if(value==true){//if there is no exception write in file
     private javax.swing.JLabel UsernameLabel;
     private javax.swing.JTextField UsernameTextField;
     private javax.swing.JLabel nameLabel;
-    private javax.swing.JTextField nameTextField;
+    public javax.swing.JTextField nameTextField;
     private javax.swing.JLabel signInLabel;
     // End of variables declaration//GEN-END:variables
 }

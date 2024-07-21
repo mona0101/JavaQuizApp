@@ -1,0 +1,17 @@
+xm456,Alex,Pass123@,alex@email.com,300
+modi,mod,Moddwd66@,moddwd66@gmail..com,100
+CodeMaster,Kevin,Code@456,kevin.code@gmail.com,400
+sara123,sara,12345@A,sara@gmail.com,600
+GalacticExplorer,Nova,Galaxy@Pass789,nova.galaxy@yahoo.com,300
+QuantumCoder,Ethan,QuantumPass@321,ethan.coder@gmail.com,700
+rahaf,rahaf,Ar@314280,rahaf@gmail.com,200
+Nona,Nona,123@@AA,Nona@gmail.com,100
+sara8888,sara,12365AA@,dDd@.com,600
+nona123456,nona,1234@As,sss@s,500
+Sarah99,Sarah,Sarah1234@,sarah@yahoo.com,200
+Raghad2,Raghad,Raghad2@,raghad@gmail.com,400
+JazzPlayer,Miles,azz1@2345,miles.jazz@yahoo.com,100
+lina,lina,123@@AA,lina@gmail,200
+Sparkle99,Lily,Sp14P9@,lily.sparkle@hotmail.com,600
+nona,nona,123@@AA,nona@gmail,400
+IAmMaya,maya,123@@AA,maya@gimal,400

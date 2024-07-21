@@ -1,5 +1,6 @@
 package techie;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -7,7 +8,8 @@ import java.util.logging.Logger;
 public class Q1Level3 extends javax.swing.JFrame {
 
     showMessageDialog op
-            = new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
+            = new showMessageDialog("Wrong answer, you have scored zero points\nKeep going – success is on the way!\n"+
+                   "Correct answer: 15 equals 510");
 
     public Q1Level3() {
         initComponents();
@@ -38,6 +40,7 @@ public class Q1Level3 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Techie");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HomeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home.png"))); // NOI18N
@@ -89,6 +92,7 @@ public class Q1Level3 extends javax.swing.JFrame {
 
         code.setBackground(new java.awt.Color(255, 254, 250));
         code.setColumns(20);
+        code.setForeground(new java.awt.Color(39, 40, 59));
         code.setRows(5);
         code.setText("public class TrickyCode {\n    public static void main(String[] args) {\n        int x = 5;\n        int y = 10;\n\n        System.out.println(x + y + \" equals \" + x + y);\n    }\n}");
         code.setToolTipText("");
@@ -132,10 +136,9 @@ public class Q1Level3 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void HomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLabelMouseClicked
-        try {
-            // TODO add your handling code here:
-
-            new levels().setVisible(true);
+       
+        this.setVisible(false);
+        try {  new levels().setVisible(true);
         } catch (IOException ex) {
             Logger.getLogger(Q1Level3.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -143,6 +146,7 @@ public class Q1Level3 extends javax.swing.JFrame {
 
     private void NextButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButton2ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         new Q2Level3().setVisible(true);
 
     }//GEN-LAST:event_NextButton2ActionPerformed
@@ -153,13 +157,24 @@ public class Q1Level3 extends javax.swing.JFrame {
         jTextField1.setEnabled(false);
         ok.setEnabled(false);
         String input = jTextField1.getText().trim();
-        if (input.equals("105 equals 105")) {
+        if (input.equals("15 equals 510")) {
 
             op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
+                  LogIn.pointCount +=100;
+                    PointsTextField.setText("" + LogIn.pointCount);
             op.setVisible(true);
-            LogIn.pointCount +=100;
-            PointsTextField.setText("" + LogIn.pointCount);
-            // LogIn.users[LogIn.row][4]= ""+LogIn.pointCount;
+        
+        
+     
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+       
 
         } else {
 
@@ -173,13 +188,24 @@ public class Q1Level3 extends javax.swing.JFrame {
         jTextField1.setEnabled(false);
         ok.setEnabled(false);
         String input = jTextField1.getText().trim();
-        if (input.equals("105 equals 105")) {
+        if (input.equals("15 equals 510")) {
 
             op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
-            op.setVisible(true);
-            LogIn.pointCount = +100;
+            LogIn.pointCount +=100;
+         
+           
             PointsTextField.setText("" + LogIn.pointCount);
-            //LogIn.users[LogIn.row][4]= ""+LogIn.pointCou
+               op.setVisible(true);
+    
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+    
 
         } else {
 

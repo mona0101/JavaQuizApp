@@ -1,6 +1,7 @@
 
 package techie;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;        
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -8,7 +9,8 @@ import java.util.logging.Logger;
 public class Q2Level3 extends javax.swing.JFrame {
     
     showMessageDialog op
-            = new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
+            = new showMessageDialog("Wrong answer, you have scored zero points\nKeep going – success is on the way!\n"+
+                   "Correct answer: 0 0");
     
     public Q2Level3() {
         initComponents();
@@ -101,6 +103,7 @@ public class Q2Level3 extends javax.swing.JFrame {
 
         code.setBackground(new java.awt.Color(255, 254, 250));
         code.setColumns(20);
+        code.setForeground(new java.awt.Color(39, 40, 59));
         code.setRows(5);
         code.setText("class Test {\n    protected int x, y;\n}\n \nclass Main {\n    public static void main(String args[]) {\n        Test t = new Test();\n        System.out.println(t.x + \" \" + t.y);\n    }\n}");
         code.setToolTipText("");
@@ -113,6 +116,7 @@ public class Q2Level3 extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 230, 170));
 
         enterLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        enterLabel.setForeground(new java.awt.Color(39, 40, 59));
         enterLabel.setText("Enter Your Answer:");
         getContentPane().add(enterLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 140, 30));
 
@@ -166,9 +170,18 @@ public class Q2Level3 extends javax.swing.JFrame {
 
             op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
             op.setVisible(true);
-            LogIn.pointCount = +100;
+              LogIn.pointCount +=100;
             PointsTextField.setText("" + LogIn.pointCount);
-            // LogIn.users[LogIn.row][4]= ""+LogIn.pointCount;
+   
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+   
 
         } else {
 
@@ -185,10 +198,18 @@ public class Q2Level3 extends javax.swing.JFrame {
 
             op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
             op.setVisible(true);
-             LogIn.pointCount +=100;
+                LogIn.pointCount +=100;
+      
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
             PointsTextField.setText("" + LogIn.pointCount);
-            //LogIn.users[LogIn.row][4]= ""+LogIn.pointCou
-
+           
         } else {
 
             op.setVisible(true);
@@ -197,6 +218,7 @@ public class Q2Level3 extends javax.swing.JFrame {
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         new Q3Level3().setVisible(true);
     }//GEN-LAST:event_NextButtonActionPerformed
 

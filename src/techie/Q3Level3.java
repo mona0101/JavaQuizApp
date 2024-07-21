@@ -1,13 +1,14 @@
 package techie;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Q3Level3 extends javax.swing.JFrame {
 
-    showMessageDialog op
-            = new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
+   showMessageDialog op =new showMessageDialog("Wrong answer, you have scored zero points\nKeep going – success is on the way!\n"+
+                   "Correct answer: 22");
 
     public Q3Level3() {
         initComponents();
@@ -60,7 +61,7 @@ public class Q3Level3 extends javax.swing.JFrame {
         PointsTextField.setForeground(new java.awt.Color(39, 40, 59));
         PointsTextField.setText("00");
         PointsTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 20, 20));
+        getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 30, 20));
 
         NextButton.setBackground(new java.awt.Color(39, 40, 59));
         NextButton.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -80,7 +81,7 @@ public class Q3Level3 extends javax.swing.JFrame {
 
         Q3Label.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Q3Label.setForeground(new java.awt.Color(39, 40, 59));
-        Q3Label.setText("Q3. what is the result of 1+2?");
+        Q3Label.setText("Q3.What is The Output?");
         getContentPane().add(Q3Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 240, -1));
 
         q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
@@ -100,6 +101,7 @@ public class Q3Level3 extends javax.swing.JFrame {
 
         code.setBackground(new java.awt.Color(255, 254, 250));
         code.setColumns(20);
+        code.setForeground(new java.awt.Color(39, 40, 59));
         code.setRows(5);
         code.setText("public class TrickyOutput {\n    public static void main(String[] args) {\n        int x = 3;\n        int y = 10;\n        int z = x++ * y++ + --x * x++ - y-- + x - y;\n        System.out.println(z);\n    }\n}");
         code.setToolTipText("");
@@ -112,6 +114,7 @@ public class Q3Level3 extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 250, 150));
 
         enterLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        enterLabel.setForeground(new java.awt.Color(39, 40, 59));
         enterLabel.setText("Enter Your Answer:");
         getContentPane().add(enterLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 140, 30));
 
@@ -146,6 +149,7 @@ public class Q3Level3 extends javax.swing.JFrame {
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         new CongratsL1().setVisible(true);
     }//GEN-LAST:event_NextButtonActionPerformed
 
@@ -164,13 +168,24 @@ public class Q3Level3 extends javax.swing.JFrame {
         jTextField1.setEnabled(false);
         ok.setEnabled(false);
         String input = jTextField1.getText().trim();
-        if (input.equals("17")) {
+        if (input.equals("22")) {
 
             op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
             op.setVisible(true);
-            LogIn.pointCount +=100;
+               LogIn.pointCount +=100;
+            
+     
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+       
             PointsTextField.setText("" + LogIn.pointCount);
-            //LogIn.users[LogIn.row][4]= ""+LogIn.pointCou
+          
 
         } else {
 
@@ -184,13 +199,23 @@ public class Q3Level3 extends javax.swing.JFrame {
         jTextField1.setEnabled(false);
         ok.setEnabled(false);
         String input = jTextField1.getText().trim();
-        if (input.equals("17")) {
+        if (input.equals("22")) {
 
             op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
             op.setVisible(true);
-            LogIn.pointCount = +100;
+               LogIn.pointCount +=100;
             PointsTextField.setText("" + LogIn.pointCount);
-            // LogIn.users[LogIn.row][4]= ""+LogIn.pointCount;
+           
+   
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+       
 
         } else {
 

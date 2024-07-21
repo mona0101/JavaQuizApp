@@ -1,9 +1,15 @@
 
 package techie;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Q2Level2 extends javax.swing.JFrame {
    showMessageDialog op = 
-           new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
+           new showMessageDialog("Wrong answer, you have scored zero points\nKeep going – success is on the way!\n"+
+                   "Correct answer: MEET YOU IN THE PARK ");
     public Q2Level2() {
         initComponents();
        
@@ -52,11 +58,6 @@ public class Q2Level2 extends javax.swing.JFrame {
         PointsTextField.setForeground(new java.awt.Color(39, 40, 59));
         PointsTextField.setText("00");
         PointsTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        PointsTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PointsTextFieldActionPerformed(evt);
-            }
-        });
         getContentPane().add(PointsTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 40, 20));
 
         NextButton.setBackground(new java.awt.Color(39, 40, 59));
@@ -138,18 +139,19 @@ public class Q2Level2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+        this.setVisible(false);
         new Q3Level2().setVisible(true);
        
     }//GEN-LAST:event_NextButtonActionPerformed
 
-    private void PointsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PointsTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PointsTextFieldActionPerformed
-
     private void HomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLabelMouseClicked
         // TODO add your handling code here:
         this.dispose();
-        new Welcome().setVisible(true);
+       try {
+           new levels().setVisible(true);
+       } catch (IOException ex) {
+           Logger.getLogger(Q2Level2.class.getName()).log(Level.SEVERE, null, ex);
+       }
     }//GEN-LAST:event_HomeLabelMouseClicked
 
     private void a1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_a1ActionPerformed
@@ -163,6 +165,16 @@ public class Q2Level2 extends javax.swing.JFrame {
       op = new showMessageDialog("Congratulations!\n You've just scored 100 points!");
         op.setVisible(true);
         LogIn.pointCount +=100;
+    
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+       
         PointsTextField.setText("" + LogIn.pointCount);
         op.setVisible(true);
         

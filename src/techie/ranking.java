@@ -3,11 +3,13 @@ package techie;
 
 import java.awt.Color;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.border.LineBorder;
 
 
 
@@ -16,13 +18,17 @@ import javax.swing.table.*;
 
 
 public class ranking extends javax.swing.JFrame {
-private String[][] ranking = new String [20][5];
+ private String sort [][] = new String [20][5];
     /**
      * Creates new form ranking
      */
     public ranking() throws IOException {
         initComponents();
         jScrollPane1.setBorder(null);
+        jTable1.setGridColor(new Color(255,254,250));
+        jScrollPane1.setBorder(new LineBorder(new Color(255,254,250)));
+        // Adjust the alpha value (last parameter) as needed
+            
         DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
         headerRenderer.setBackground(new Color(255,254,250));
        
@@ -35,34 +41,45 @@ private String[][] ranking = new String [20][5];
           TableColumn rank=col.getColumn(0); rank.setPreferredWidth(2);
           TableColumn pints=col.getColumn(2);  pints.setPreferredWidth(2);
           DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
-        /*
-         try {
-              
-            Arrays.sort(LogIn.users, (a, b) -> Integer.compare(Integer.parseInt(a[4]), Integer.parseInt(a[4])));
-
-        } catch (Exception e) {
-            Arrays.sort(LogIn.users, (a, b) -> a[4].compareTo(b[4]));
-
-        }
-        
-            
-          for(int i=0 ; i<  LogIn.users.length; i++){
-            if(LogIn.users[i][3]== null){
-                break;
-             }
-            
-         model.insertRow(i,new Object[]{i+1, LogIn .users[i][1], LogIn .users[i][4]});
-          }
+      
+           LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
            
-       
-
- model.insertRow(3,new Object[]{3, LogIn .users[2][1], LogIn .users[2][4]});
-         
-        */
-         model.insertRow(0,new Object[]{1, "raghad12", 300});
-
-          model.insertRow(1,new Object[]{2, "mona20", "200"});
+        for (int i = 0; i < 20; i++) {
+            sort[i] = Arrays.copyOf(LogIn.users[i], 5);
+        }   
+          
+      try {
+    Arrays.sort(sort, (a, b) -> {
         
+        String aValue = a[4];
+        String bValue = b[4];
+
+        if (aValue == null && bValue == null) {
+            return 0; 
+        } else if (aValue == null) {
+            return 1; 
+        } else if (bValue == null) {
+            return -1;
+        } else {
+            
+            return Integer.compare(Integer.parseInt(bValue), Integer.parseInt(aValue));
+        }
+    });
+} catch (NumberFormatException e) {
+    System.out.println(e.getMessage());
+    
+}
+           
+          for (int j = 0; j < 20; j++) {
+            if (sort[j][0] == null) {
+                break;
+            }
+
+            model.insertRow(j, new Object[]{j + 1, sort[j][0], sort[j][4]});
+        }
+          
+           Techie.SavingNewDataToFile() ;
+       
     }
 
    
@@ -77,17 +94,14 @@ private String[][] ranking = new String [20][5];
         backGroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
-        rankingLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        rankingLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        rankingLabel.setForeground(new java.awt.Color(39, 40, 59));
         rankingLabel.setText("Ranking");
-        rankingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                rankingLabelMouseClicked(evt);
-            }
-        });
         getContentPane().add(rankingLabel);
-        rankingLabel.setBounds(110, 60, 90, 40);
+        rankingLabel.setBounds(110, 50, 90, 40);
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -118,10 +132,12 @@ private String[][] ranking = new String [20][5];
                 return canEdit [columnIndex];
             }
         });
+        jTable1.getTableHeader().setResizingAllowed(false);
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(30, 200, 270, 50);
+        jScrollPane1.setBounds(30, 200, 270, 150);
 
         HomeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home.png"))); // NOI18N
         HomeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,10 +156,6 @@ private String[][] ranking = new String [20][5];
         setSize(new java.awt.Dimension(347, 608));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void rankingLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rankingLabelMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rankingLabelMouseClicked
 
     private void HomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLabelMouseClicked
         // TODO add your handling code here:

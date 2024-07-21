@@ -1,5 +1,6 @@
 package techie;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -7,7 +8,8 @@ import java.util.logging.Logger;
 public class Q1Level2 extends javax.swing.JFrame {
 
    showMessageDialog op = 
-           new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
+           new showMessageDialog("Wrong answer, you have scored zero points\nKeep going – success is on the way!\n"+
+                   "Correct answer: 4516");
          
     public Q1Level2() {
         initComponents();
@@ -137,6 +139,7 @@ public class Q1Level2 extends javax.swing.JFrame {
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         new Q2Level2().setVisible(true);
 
 
@@ -148,7 +151,7 @@ public class Q1Level2 extends javax.swing.JFrame {
 
     private void HomeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeLabelMouseClicked
         // TODO add your handling code here:
-        
+        this.setVisible(false);
        try {
            new levels().setVisible(true);
        } catch (IOException ex) {
@@ -204,7 +207,16 @@ public class Q1Level2 extends javax.swing.JFrame {
         op.setVisible(true);
                 
        LogIn.pointCount +=100;
-      //LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+     
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+       
         PointsTextField.setText("" + LogIn.pointCount);
 
     }//GEN-LAST:event_a4ActionPerformed

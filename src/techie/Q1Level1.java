@@ -1,5 +1,6 @@
 
 package techie;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -7,7 +8,8 @@ import javax.swing.*;
 
 public class Q1Level1 extends javax.swing.JFrame {
      showMessageDialog op = 
-           new showMessageDialog("Wrong answer, you have scored zero pints.\n Keep going – success is on the way!");
+           new showMessageDialog("Wrong answer, you have scored zero points\nKeep going – success is on the way!\n"+
+                   "Correct answer: Fn = Fn-1 + Fn-2 ");
     
    private ButtonGroup group=new ButtonGroup();
   
@@ -163,7 +165,16 @@ public class Q1Level1 extends javax.swing.JFrame {
         op.setVisible(true);
                 
          LogIn.pointCount +=100;
-      //LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+     
+     if(LogIn.row !=-1){   
+     LogIn.users[LogIn.row][4]= ""+LogIn.pointCount ;
+           try { 
+               Techie.SavingNewDataToFile() ;
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(Q1Level1.class.getName()).log(Level.SEVERE, null, ex);
+           }
+      }
+       
         PointsTextField.setText("" + LogIn.pointCount);
     }//GEN-LAST:event_Choice1RadioButtonActionPerformed
 
@@ -189,6 +200,8 @@ public class Q1Level1 extends javax.swing.JFrame {
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // TODO add your handling code here:
+       // this.setVisible(false);
+        this.dispose();
         new Q2Level1().setVisible(true);
     }//GEN-LAST:event_NextButtonActionPerformed
 
