@@ -10,3 +10,8 @@ This is a simple **Quiz Application** built using **Java Swing**. The app allows
 - **Score Tracking**: The app tracks the user’s score and displays it at the end.
 
 
+## 📹 Demo Video
+Watch the demo video of the Quiz Application:
+
+https://github.com/user-attachments/assets/bef48630-b5a7-4071-aea8-19cbd58023dc
+
